@@ -1,0 +1,14 @@
+body {
+    background-image: url(topography.png)
+    text-align: center;
+}
+.container {
+    background-color: #333333
+}
+a {
+    color: #ff0099;
+}
+
+p { 
+    color: black;
+  }
