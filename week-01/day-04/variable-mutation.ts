@@ -2,27 +2,29 @@
 
 let a: number = 3;
 // make it bigger by 10
-console.log(a);
+console.log(a + 10);
 
 let b: number = 100;
 // make it smaller by 7
-console.log(b);
+console.log(b - 7);
 
 let c: number = 44;
 // double c's value
-console.log(c);
+console.log(c * 2);
 
 let d: number = 125;
 // divide d's value by 5
-console.log(d);
+console.log(d / 5);
 
 let e: number = 8;
 // what's the cube of e's value?
-console.log(e);
+console.log(e**3);
 
 let f1: number = 123;
 let f2: number = 345;
 // tell if f1 is bigger than f2 (as a boolean)
+
+
 let g1: number = 350;
 let g2: number = 200;
 // tell if the double of g2 is bigger than g1 (pras a boolean)
