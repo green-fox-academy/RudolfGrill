@@ -6,3 +6,13 @@
 // Your height in meters as a float
 // Whether you are married or not as a boolean
 
+
+let myName: string = 'Rudi';
+let myAge: number = 30;
+let myHeight: number = 1.9;
+let amIMarried: Boolean = false;
+
+console.log(myName);
+console.log(myAge);
+console.log(myHeight);
+console.log(amIMarried);
