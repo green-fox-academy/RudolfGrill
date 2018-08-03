@@ -1,7 +1,7 @@
 'use strict';
+export {}
 
-let lineCount: number = 4;
-// Write a program that draws a triangle like this:
+// Write a program that draws a triangle like this: Rudi
 //
 // *
 // **
@@ -9,6 +9,10 @@ let lineCount: number = 4;
 // ****
 //
 // The triangle should have as many lines as lineCount is
+
+
+
+let lineCount: number = 4;
 let line = '';
 
 for (let i: number = 0; i < lineCount; i++) {
