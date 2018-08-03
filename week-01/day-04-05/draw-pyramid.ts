@@ -9,7 +9,8 @@ export {}
 // *******
 //
 // The pyramid should have as many lines as lineCount is
+export {}
 
-let lineCount: number = 4;
+'use strict';
 
 
