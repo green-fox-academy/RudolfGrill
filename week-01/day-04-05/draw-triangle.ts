@@ -1,7 +1,7 @@
 'use strict';
 export {}
 
-// Write a program that draws a triangle like this: Rudi
+// Write a program that draws a triangle like this: 
 //
 // *
 // **
