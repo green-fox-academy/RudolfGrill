@@ -26,7 +26,7 @@ else if (20 < b){
 
 let c: number = 123;
 let credits: number = 40;
-let isBonus: boolean = true;
+let isBonus: boolean = false;
 
 // if credits are at least 50,
 // and is_bonus is false decrement c by 2
