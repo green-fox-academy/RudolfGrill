@@ -12,6 +12,6 @@ let lineCount: number = 4;
 let line = '';
 
 for (let i: number = 0; i < lineCount; i++) {
-    line = line + '*';
+    line += '*'; //line = line + '*';
     console.log(line);
 }
