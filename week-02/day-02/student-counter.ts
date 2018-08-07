@@ -25,9 +25,12 @@ function HowManyCandies (eachStudent: any []){
 
 HowManyCandies(students);
 
+
+
+
 function sumOfAges (list: any[]){
     let age: number = 0;
-    list.forEach((element) => {
+    list.forEach(element => {
         if (element['candies'] < 5) {
             age += element ['age'];
         }
@@ -37,3 +40,7 @@ function sumOfAges (list: any[]){
 console.log(sumOfAges(students));
 
 sumOfAges(students);
+
+
+
+
