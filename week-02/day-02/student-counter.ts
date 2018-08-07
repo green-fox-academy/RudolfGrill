@@ -18,7 +18,8 @@ const students: any[] = [
 
 function HowManyCandies (eachStudent: any []){
     let studentCandies: number = 0;
-    eachStudent.forEach(object => {studentCandies +=object.candies});
+    eachStudent.forEach(object => {
+        studentCandies +=object.candies});
     console.log(studentCandies);
 };
 

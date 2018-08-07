@@ -8,41 +8,17 @@ let boys: string[] = ['Joe', 'Fred', 'Tom', 'Todd', 'Neef', 'Jeff'];
 //console.log(makingMatches(girls, boys));
 
 
-function oneGirlOneBoys(list1: string[], list2: string[]){
-    let oneGirlOneBoys: string[] = list1;
+function oneGirlOneBoy(list1: string[], list2: string[]){
+    let mixing: string[] = list1;
     let step: number = 0;
-    array.forEach(element => {
-        
-    });
+    for  (let i = 0; i < list1.length; i += 2) {
+        mixing.splice(i, 0, boys[step]);
+    }
+    return(mixing);
 }
 
+console.log(oneGirlOneBoy(girls, boys));
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*function makingMatches(list1: string[], list2: string[]): string[] {
-  let madeInHeaven: string[] = list1;
-  let step: number = 0;
-  for (let i = 1; i <= (list1.length); i += 2) {
-    madeInHeaven.splice(i, 0, boys[step]);
-    step++;
-  }
-  return madeInHeaven;
-}
-
-console.log(makingMatches(girls, boys));
-
-
-//export = makingMatches; */
+export = makingMatches; 
