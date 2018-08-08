@@ -10,5 +10,14 @@ const ctx = canvas.getContext('2d');
 // Draw 3 squares with that function.
 // Avoid code duplication.
 
+function drawSquare(xIndex: number, ) {
+    ctx.fillRect(xIndex, xIndex, 50, 50)
+    ctx.beginPath();
 
-ctx.fillRect(0,0,20,20);
+}
+
+
+for (let j: number = 0; j < 3; j++) {
+    let x: number = ((Math.random() * 300) + 1);
+    drawSquare(x);
+}
