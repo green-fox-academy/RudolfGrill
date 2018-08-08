@@ -18,21 +18,28 @@ ctx.moveTo(0, 0);
 ctx.lineTo(300, 200);
 ctx.stroke();
 */
-function drawLine(xIndex: number, yIndex: number){
-    ctx.strokeStyle = 'green';
+
+/*var r = Math.floor(Math.random()*256);          // Random between 0-255
+var g = Math.floor(Math.random()*256);          // Random between 0-255
+var b = Math.floor(Math.random()*256);          // Random between 0-255
+var rgb = 'rgb(' + r + ',' + g + ',' + b + ')'; // Collect all to a string */
+/*let color = “rgb(“+ Math.floor(Math.random() * 255) + “,”+ Math.floor(Math.random() * 255) + “,”+ Math.floor(Math.random() * 255) + “)”
+console.log(color); 
+let color: string = rgb;*/
+
+function drawLine(xIndex: number, yIndex: number) {
     ctx.beginPath();
+    //let color: string = rgb2;
+    ctx.strokeStyle //= color;
     ctx.moveTo(xIndex, yIndex);
-    ctx.lineTo(canvas.width/2, canvas.height/2);
+    ctx.lineTo(canvas.width / 2, canvas.height / 2);
     ctx.stroke();
 
 };
 
-//let x= Math.floor(Math.random() * 600);
-//let y= Math.floor(Math.random() * 400);
-
 for (let i = 0; i < 30; i++) {
-    let x= Math.floor(Math.random() * canvas.width);
-    let y= Math.floor(Math.random() * canvas.height);
+    let x = Math.floor(Math.random() * canvas.width);
+    let y = Math.floor(Math.random() * canvas.height);
     drawLine(x, y);
 }
 
