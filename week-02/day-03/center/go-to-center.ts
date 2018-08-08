@@ -18,16 +18,29 @@ ctx.moveTo(0, 0);
 ctx.lineTo(300, 200);
 ctx.stroke();
 */
-let d = getRandomNumbers
-ctx.strokeStyle = 'green';
-ctx.beginPath();
-ctx.moveTo(2, 0);
-ctx.lineTo(300, 200);
-ctx.stroke();
+function drawLine(xIndex: number, yIndex: number){
+    ctx.strokeStyle = 'green';
+    ctx.beginPath();
+    ctx.moveTo(xIndex, yIndex);
+    ctx.lineTo(canvas.width/2, canvas.height/2);
+    ctx.stroke();
+
+};
+
+//let x= Math.floor(Math.random() * 600);
+//let y= Math.floor(Math.random() * 400);
+
+for (let i = 0; i < 30; i++) {
+    let x= Math.floor(Math.random() * canvas.width);
+    let y= Math.floor(Math.random() * canvas.height);
+    drawLine(x, y);
+}
 
 
-function getRandomNumbers(max: any) {
-    return Math.floor(Math.random() * Math.floor(max)*100);
-  }
+
+
+
+//    Math.floor(Math.random() * 600);
+
 
 
