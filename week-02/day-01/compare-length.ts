@@ -11,9 +11,11 @@ export{}
 
 let firstList = [1,2,3];
 let secondList = [4,5];
+let stringOutPut: string = "";
 
-if (firstList.length > secondList){
-  console.log("The first list has more elements!");
+if (firstList.length > secondList.length){
+  stringOutPut = ("The first list has more elements!");
 } else {
-  console.log("The second list has more elemnts!");
+  stringOutPut = ("The second list has more elemnts!");
 }
+console.log(stringOutPut);
