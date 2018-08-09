@@ -15,6 +15,7 @@ let workdays = 5
 let averageWorkHoursWeekly = 52;
 
 console.log(dailyCodingHours * semesterLongWeeks * workdays);
+console.log(((dailyCodingHours*workdays)/ averageWorkHoursWeekly)*100);
 
 
 
