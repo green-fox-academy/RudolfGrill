@@ -11,8 +11,9 @@ function factorio( inPutNumber: number){
     for (let i = 1; i <= inPutNumber; i++){
         factorialStart = factorialStart * i;
     }
-    return factorialStart;
+    console.log(factorialStart);
 }
 
-let answer = factorio(factorialThisNumber);
-console.log(answer);
+
+
+factorio(factorialThisNumber);

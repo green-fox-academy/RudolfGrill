@@ -7,7 +7,7 @@ export{}
 
 
 function printParams(...anything: any[]){
-    anything.forEach(function(anything: any){
+    anything.map(function(anything: any){
     console.log(anything);
     });
 }

@@ -11,4 +11,9 @@ export{}
 
 let firstList = [1,2,3];
 let secondList = [4,5];
-console.log ()
+
+if (firstList.length > secondList){
+  console.log("The first list has more elements!");
+} else {
+  console.log("The second list has more elemnts!");
+}

@@ -14,31 +14,26 @@ export { }
 //
 // The diamond should have as many lines as lineCount is
 let lineCount: number = 7;
-let halfLineCount: number = Math.floor(lineCount / 2);
+let spaceCount: number = 3
+let starCount: number = 1;
+let output: string = "";
 
-for (let i: number = 0; i < halfLineCount; i++) {
-    let pyramid: string = '';
-    for (let j: number = 0; j < halfLineCount - i; j++) {
-        pyramid += " ";
-    } for (let k: number = 0; k < i + 1; k++) {
-        if (k === 0) {
-            pyramid += '*';
-        } else {
-            pyramid += '**';
-        }
+for (let i = 0; i < lineCount; i++) {
+    output = "";
+    for (let j = 0; j < spaceCount; j++) {
+        output += " ";
     }
-    console.log(pyramid);
-}
-for (let i: number = halfLineCount; i >= 0; i--) {
-    let pyramid: string = '';
-    for (let j: number = 0; j < halfLineCount - i; j++) {
-        pyramid += " ";
-    } for (let k: number = 0; k < i + 1; k++) {
-        if (k === 0) {
-            pyramid += '*';
-        } else {
-            pyramid += '**';
-        }
+    for (let k = 0; k < starCount; k++) {
+        output += "*";
+    }   
+    if (i < 3) {
+        spaceCount --;
+        starCount += 2;
+    } else {
+        spaceCount ++;
+        starCount -= 2;
     }
-    console.log(pyramid);
+
+    console.log(output);
+
 }

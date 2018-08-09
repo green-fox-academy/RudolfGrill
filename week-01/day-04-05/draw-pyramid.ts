@@ -23,10 +23,10 @@ for (let i = 0; i < lineCount; i++) {
     for (let j = 0; j < spaceCount; j++) {
         output += " ";
     }
-    for (let k = 0;k< starCount;k++) { 
+    for (let k = 0; k < starCount; k++) {
         output += "*";
     }
     console.log(output);
-    spaceCount --;
+    spaceCount--;
     starCount += 2;
 }

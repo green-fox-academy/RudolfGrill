@@ -12,6 +12,7 @@ function sum (myNumbers: number) {
         total= total + i;
  }
  return total;
+
 }
 
 let answer = sum(givenParameter);
