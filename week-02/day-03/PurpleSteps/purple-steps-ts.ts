@@ -7,17 +7,16 @@ const ctx = canvas.getContext('2d');
 // Reproduce this:
 // [https://github.com/green-fox-academy/teaching-materials/blob/master/workshop/drawing/purple-steps/r3.png]
 
-let stepSize: number = 20;
-
-let squereSize: number = 10;
-
-let numberOfSteps: number = 19;
 
 
-for (let i = 0; i < numberOfSteps; i++) {
-    ctx.fillStyle = 'purple';
-    ctx.fillRect(stepSize * i/2, stepSize * i/2, squereSize, squereSize);
 
-}
-
-
+function purpleSteps(size: number, start_X: number, start_Y) {
+    for (let i: number = 0; i <= 19; i++) {
+      ctx.fillStyle = 'purple';
+      ctx.beginPath();
+      ctx.fillRect(start_X, start_Y, size, size);
+      start_X = start_X + size;
+      start_Y = start_Y + size;
+    }
+  }
+  purpleSteps(20, 0, 0);
