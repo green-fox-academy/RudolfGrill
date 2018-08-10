@@ -1,5 +1,6 @@
 'use strict';
-export{}
+
+
 const canvas = document.querySelector('.main-canvas') as HTMLCanvasElement;
 const ctx = canvas.getContext('2d');
 
@@ -17,7 +18,7 @@ function getRandomColor() {
 function drawRect() {
     ctx.fillStyle = getRandomColor();
     ctx.beginPath();
-    ctx.fillRect(x, y, a, b);
+    ctx.fillRect(x % canvas.width, y % canvas.height, a % canvas.width, b % canvas.height);
 }
 
 
