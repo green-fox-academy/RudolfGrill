@@ -4,7 +4,7 @@ export{};
 // *hint: use a loop, console.log(integers) won't cut it
 // -  bonus for using the correct built in array method
 
-let j: any;
+//let j: any;
 let integers: number [] = [4, 5, 6, 7];
 
 /*for (j in  integers) {
@@ -17,3 +17,4 @@ let printAll = function(element: number){
 }
 
 integers.forEach(printAll);
+integers.map(printAll);
