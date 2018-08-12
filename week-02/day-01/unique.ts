@@ -8,12 +8,19 @@ export{}
 
 
 
-let list: any = [1, 11, 34, 11, 52, 61, 1, 34];
+//let list: any = [1, 11, 34, 11, 52, 61, 1, 34];
 
-function uniqueList(elem:number) {
-    elem.forEach(elem => {
-        elem.
-        
-    });
-    
+function unique(array) {
+    let newArray: number[] = [];
+    array.forEach(function (arrayElem) {
+        if
+        (!newArray.some(function (newArrayElem) {
+            return arrayElem == newArrayElem;
+        }))
+            {
+            newArray.push(arrayElem);
+            }
+    })
+    return newArray;
 }
+console.log(unique([1, 11, 34, 11, 52, 61, 1, 34]));

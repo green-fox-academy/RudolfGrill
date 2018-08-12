@@ -7,9 +7,9 @@ export{}
 
 let drinks = ['Gin', 'Whiskey', 'Wine', 'Beer'];
 
-drinks = drinks.map(function(elem){
+let doubledrinks = drinks.map(function(elem){
   return elem + elem;
 }
 );
 
-console.log(drinks);
+console.log(doubledrinks);

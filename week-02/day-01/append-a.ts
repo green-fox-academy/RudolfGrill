@@ -3,12 +3,12 @@ export{}
 //    with the following content: `["koal", "pand", "zebr"]`
 // -  Add all elements an `"a"` at the end
 
-let animals= ["koal", "pand", "zebr"];
+let animals = ["koal", "pand", "zebr"];
 
-animals  = animals.map(function(elem) {
+let correctedAnimals = animals.map(function(elem) {
     return elem + "a";
   }
 );
-
-console.log(animals);
+ 
+console.log(correctedAnimals);
 

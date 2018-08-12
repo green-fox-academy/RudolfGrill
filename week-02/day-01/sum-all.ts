@@ -5,8 +5,14 @@ export { }
 let ai: number[] = [3, 4, 5, 6, 7];
 let sum: number = 0;
 
-ai.forEach (function (elem) {
+/*ai.forEach (function (elem) {
   sum += elem;
+});
+
+console.log(sum);*/
+
+ai.forEach (function (elem) { 
+  sum += elem; 
 });
 
 console.log(sum);

@@ -30,3 +30,4 @@ for (let i = 0; i < lineCount; i++) {
     spaceCount--;
     starCount += 2;
 }
+

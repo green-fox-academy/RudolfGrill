@@ -10,6 +10,7 @@ abc.splice(2, 1, newThird);
 
 console.log(abc);
 
-
+abc[0] = newFirst
+abc[2] = newThird
 //let abc: any = ["Arthur", "Boe", "Chloe"].reverse();
 //console.log("Reversed array is : " + abc);

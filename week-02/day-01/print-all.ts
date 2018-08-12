@@ -17,4 +17,3 @@ let printAll = function(element: number){
 }
 
 integers.forEach(printAll);
-integers.map(printAll);

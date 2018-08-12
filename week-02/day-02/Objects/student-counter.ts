@@ -1,5 +1,5 @@
 export{}
-'us estrict';
+'use strict';
 
 const students: any[] = [
   {name: 'Theodor', age: 3, candies: 2},
@@ -41,7 +41,3 @@ function sumOfAges (list: any[]){
 console.log(sumOfAges(students));
 
 sumOfAges(students);
-
-
-
-
