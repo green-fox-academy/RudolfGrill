@@ -4,8 +4,8 @@ export { };
 let charEncoding = 'utf-8';
 const fs = require('fs');
 
-function writeToAFile(fileName: string, data: any): void {
-  fs.writeFileSync(fileName, data);
+function writeToFile(filename: string, data: string): void {
+  fs.writeFileSync(filename, data);
 }
 
 // Create a function that takes 3 parameters: a path, a word and a number,
@@ -18,11 +18,20 @@ function writeToAFile(fileName: string, data: any): void {
 // The function should not raise any error if it could not write the file.
 
 
-function writeMultipleLines(path: string, word: string, number: number): any {
-  try{
-
+function writeMultipleLines(path: string, word: string, numberOfLines: number) {
+  let multipleLines: string = '';
+  for (let i= 0; i < numberOfLines; i++) {
+    multipleLines = multipleLines + word + ('\n');
+  }
+  try { 
+    writeToFile(path, multipleLines);
+  } catch (e) {
+    
   }
 }
 
 
-writeMultipleLines()
+writeMultipleLines('myApple.txt', 'apple', 5);
+writeMultipleLines('myMonkey.txt', 'monkey', 8);
+
+
