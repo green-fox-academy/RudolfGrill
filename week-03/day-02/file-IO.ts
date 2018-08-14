@@ -1,9 +1,10 @@
-declare function require(path: string): any;
 'use strict';
-export { };
+declare function require(path: string): any;
+export {};
 
 const fs = require('fs');
-let charEncoding = 'utf-8';
+
+const charEncoding = 'utf-8';
 
 function readFromFile(fileName: string): string {
   try {
@@ -14,31 +15,24 @@ function readFromFile(fileName: string): string {
   }
 }
 
-//console.log(readFromFile('Hell.txt'));
-
-
-function writeToAFile(fileName: string, data: string): void {
+function writeToAFile(fileName: string, data: any): void {
   fs.writeFileSync(fileName, data);
 }
 
-writeToAFile("Hell.txt", "Hello form Hell");
-
-//console.log(readFromFile('Hell.txt'));
-
-
-function countA(char: string): number {
+function countChar(char: string): number {
   let result: number = 0;
-  const fileContent: string = readFromFile("Hello.txt");
+  const fileContent: string = readFromFile('hello.txt');
   if (fileContent !== null) {
     fileContent.split('\r\n').forEach(e => {
-      e.split("").forEach(elem => {
-        if (elem === char) {
-          result++;
+      e.split('').forEach(elem => {
+        if(elem === char) {
+          result ++;
         }
       })
     });
-    writeToAFile("result.txt", result);
+    writeToAFile('result.txt', result);
     return result;
   }
 }
-console.log(countA());
+
+console.log(countChar('a'));

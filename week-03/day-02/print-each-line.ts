@@ -15,12 +15,12 @@ const fs = require('fs');
 
 function readFromFile(fileName: string): string {
   try {
-    return fs.readFileSync(fileName, charEncoding);
+    console.log(fs.readFileSync(fileName, charEncoding));
   } catch (e) {
-    console.log(e.message,"Unable to read file: "+ fileName);
+    console.log("Unable to read file: "+ fileName);
     return null;
   }
 }
 
-console.log(readFromFile("my-fidle.txt"));
+readFromFile("my-fisle.txt");
 
