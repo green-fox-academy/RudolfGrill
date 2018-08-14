@@ -14,11 +14,11 @@ function oneGirlOneBoy(list1: string[], list2: string[]){
     for  (let i = 0; i < list1.length; i += 2) {
         mixing.splice(i, 0, boys[step]);
     }
-    return(mixing);
+    return mixing;
 }
 
 console.log(oneGirlOneBoy(girls, boys));
 
 
-
-//export = makingMatches; 
+//step += every c 
+//what about the extras from the list

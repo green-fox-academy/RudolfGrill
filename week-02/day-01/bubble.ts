@@ -11,7 +11,7 @@
 
 const numberSorter = (a, b) => a - b;
 
-function sorter (arrayToSort: number[], descend: boolean = false): number[] {
+function sorter(arrayToSort: number[], descend: boolean = false): number[] {
     let newArray: number[] = arrayToSort.sort(numberSorter);
     if (descend) {
         newArray.reverse();
@@ -19,5 +19,5 @@ function sorter (arrayToSort: number[], descend: boolean = false): number[] {
     return newArray;
 }
 
-console.log(sorter([34, 12, 24, 9, 5]));
-console.log(sorter([34, 12, 24, 9, 5],true));
+console.log(sorter([34, 12, 24, 9, 5, 112]));
+console.log(sorter([34, 12, 24, 9, 5], true));

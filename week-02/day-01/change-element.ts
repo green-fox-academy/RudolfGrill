@@ -9,7 +9,7 @@ let numList = [1, 2, 3, 8, 5, 6];
 console.log(numList);
 
 
-numList = numList.map(function(elem) {
+let numList2 = numList.map(function(elem) {
   if (elem == 8) {
       elem = 4;
   }    
@@ -17,4 +17,5 @@ numList = numList.map(function(elem) {
   }
 );
 
+console.log(numList2);
 console.log(numList[3]);
