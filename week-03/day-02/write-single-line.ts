@@ -21,10 +21,9 @@ function writeMyNameInAFile(fileName: string, writeThisInTheFile ): any {
     fs.writeFileSync(fileName, writeThisInTheFile)
   }
   catch (e) {
-    console.log('Unable to write file: ' + fileName);
+    throw new Error ('Unable to write file: ' + fileName); 
   }
-  return fileName;
 }
 
 
-writeMyNameInAFile("my-file2.txt", "Rudolf Grill");
+writeMyNameInAFile("my-file3.txt", "Rudolf Grill");
