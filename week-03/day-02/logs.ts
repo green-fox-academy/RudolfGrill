@@ -14,14 +14,21 @@ function writeToAFile(fileName: string, data: any): void {
 // Write a function that returns an array with the unique IP adresses.
 // Write a function that returns the GET / POST request ratio.
 
-function readFromFile(fileName: string): string {
-  try {
-    return fs.readFileSync(fileName, charEncoding);
-  } catch (e) {
-    console.log(e.message);
-    return null;
-  }
+function readFile(file: string) {
+  let fileContent: string[] = fs.readFileSync(file, 'utf-8').split('\n');
+  return fileContent;
 }
 
-readFromFile("logs.txt");
+function uniqueIPs(fileName: string) {
+  let listOfIPs: string[] = [];
+  readFile(fileName).forEach(elem => listOfIPs.push(elem.slice(27, 38)));
+  let listOfUniqueIPs: string[] = [];
+  listOfIPs.forEach(function (item) {
+    if (listOfUniqueIPs.every(elem => elem !== item)) {
+      listOfUniqueIPs.push(item);
+    }
+  });
+  return listOfUniqueIPs;
+  }
 
+console.log(uniqueIPs('logs.txt'));
