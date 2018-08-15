@@ -42,7 +42,7 @@ function dominoesSanke(list: Domino[]) {
     newDominoes.push(dominoes[0].values);
     for (let i = 0; i < dominoes.length; i++) {
         for (let j = 0; j < dominoes.length; j++)
-            if(newDominoes[i][1]=== dominoes[j].values[0]){
+            if (newDominoes[i][1] === dominoes[j].values[0]) {
                 newDominoes.push(dominoes[j].values);
             }
     }
