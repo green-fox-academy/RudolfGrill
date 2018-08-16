@@ -27,50 +27,8 @@ let symmetricMatrix2: number[][] = [
   [1, 2, 1]
 ]
 
-function isSymmetric(exampleSymmetricMatrix: number[][]): boolean {
-  for (let i = 0; i < exampleSymmetricMatrix.length; i++) {
-    for (let j = 1; j < exampleSymmetricMatrix.length; j++) }{
-      
-  break  
-  }
+function isSymmetric(){
+  
 }
-
 isSymmetric(symmetricMatrix);
 isSymmetric(symmetricMatrix2);
-
-/*function isSymmetric(exampleSymmetricMatrix: number[][]) {
-  for (let i = 0; i < exampleSymmetricMatrix.length; i++) {
-    console.log(i);
-    for (let j = 1; j < exampleSymmetricMatrix.length; j++) {
-      console.log("*");
-      if (symmetricMatrix[0][0] !== symmetricMatrix[0][1] && 
-          symmetricMatrix[1][1] !== symmetricMatrix[1][2])   {
-        console.log("true");
-        break;
-      } else {
-        console.log("This is not symmetric!");
-        break;
-      }
-    }
-  }
-}*/
-/*
-function isSymmetric(exampleSymmetricMatrix: number[][]) {
-  let symmetricornot: number [][] = [];
-  for (let i = 0; i < exampleSymmetricMatrix.length; i++){
-    for (let j = 0; j < exampleSymmetricMatrix.length; j++){
-      if (symmetricMatrix[0][2] == symmetricMatrix[2][0]  &&
-      symmetricMatrix[0][1] == symmetricMatrix[1][0] &&
-      symmetricMatrix[0][0] == symmetricMatrix[0][2] &&
-      symmetricMatrix[1][1] == symmetricMatrix[1][2] &&
-      symmetricMatrix[2][1] == symmetricMatrix[1][2] &&
-      symmetricMatrix[2][1] !== symmetricMatrix[2][2] &&
-      symmetricMatrix[2][0] !== symmetricMatrix[2][2]) 
-        console.log("true");
-      } else {
-      console.log("WTF! This is not symmetric!");
-    }
-  }
-}
-isSymmetric(symmetricMatrix);
-isSymmetric(symmetricMatrix2);*/
