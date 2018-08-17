@@ -4,21 +4,22 @@ const canvas = document.querySelector('.main-canvas') as HTMLCanvasElement;
 const ctx = canvas.getContext('2d');
 
 
-let myAngle: number = 0;
+//ctx.strokeRect(200, 0, 200, 200);
+//ctx.strokeRect(0, 200, 200, 200);
+//ctx.strokeRect(400, 200, 200, 200);
+//ctx.strokeRect(200, 400, 200, 200);
 
-ctx.rotate(myAngle * Math.PI / 180);
+function sierpinskiCarpet(a: number) {
+  if (a>10) {
+    ctx.strokeRect(a, a / a, a, a);
+    ctx.strokeRect(a / a, a, a, a);
+    ctx.strokeRect(2 * a, a, a, a);
+    ctx.strokeRect(a, a * 2, a, a);
+    a -= 30;
+    sierpinskiCarpet(a);
+  } else {
+    return 10;
+  }
+}
 
-ctx.translate(canvas.width / 2, canvas.height / 2);
-
-let drawRect = (myAngle) => {
-  setTimeout(function () {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.rotate(myAngle * Math.PI / 180);
-    ctx.strokeRect(100, 100, 50, 50);
-    myAngle += Math.random();
-    drawRect(myAngle);
-  },0,50);
-};
-
-drawRect(myAngle); 
-
+sierpinskiCarpet(200);
