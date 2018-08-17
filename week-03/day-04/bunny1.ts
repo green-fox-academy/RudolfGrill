@@ -14,3 +14,5 @@ function bunniesEars(bunny: number): number {
 }
 
 console.log(bunniesEars(10));
+console.log(bunniesEars(15));
+console.log(bunniesEars(600));

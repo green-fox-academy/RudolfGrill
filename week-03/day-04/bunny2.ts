@@ -13,5 +13,8 @@ function funnyBunnies(bunny: number): number {
     return 3 + funnyBunnies(bunny - 1);
   }
 }
-
+console.log(funnyBunnies(2));
 console.log(funnyBunnies(4));
+console.log(funnyBunnies(10));
+console.log(funnyBunnies(40));
+

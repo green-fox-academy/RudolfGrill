@@ -32,12 +32,12 @@ let dominoes = initializeDominoes();
 /** Order them into one snake where the adjacent dominoes have the same numbers on their adjacent sides */
 /** eg: [2, 4], [4, 3], [3, 5] ... */
 
-print(dominoes);
+//print(dominoes);
 
 
 //console.log(dominoes[0].values[1]);
 
-function dominoesSanke(list: Domino[]) {
+function dominoSnake(list: Domino[]) {
     let newDominoes: number[][] = [];
     newDominoes.push(dominoes[0].values);
     for (let i = 0; i < dominoes.length; i++) {
@@ -48,4 +48,4 @@ function dominoesSanke(list: Domino[]) {
     }
     return newDominoes;
 }
-console.log(dominoesSanke(dominoes));
+console.log(dominoSnake(dominoes));
