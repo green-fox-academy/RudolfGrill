@@ -3,13 +3,22 @@
 const canvas = document.querySelector('.main-canvas') as HTMLCanvasElement;
 const ctx = canvas.getContext('2d');
 
+function beginPath(x: number, y: number){
+    ctx.strokeStyle;
+    ctx.moveTo(x, y);
+    ctx.lineTo(x*0.5 , y * 2);
+    ctx.lineTo(x/2 , y * 2);
+    ctx.stroke();
+}
+beginPath(100,100);
+
+
+
 
 function drawSquares(xCor: number, yCor: number, size: number, loop: number) {
   if (loop > 0) {
-    ctx.strokeRect(xCor + size, yCor, size, size);
-    ctx.strokeRect(xCor, yCor + size, size, size);
-    ctx.strokeRect(xCor + 2 * size, yCor + size, size, size);
-    ctx.strokeRect(xCor + size, yCor + 2 * size, size, size);
+    ctx.(xCor + size, yCor, size, size);
+    
 
     let B: number = 3
     let newsize = size / B;
@@ -24,4 +33,4 @@ function drawSquares(xCor: number, yCor: number, size: number, loop: number) {
 
   }
 }
-drawSquares(0, 0, canvas.height / 3, 10);
+//drawSquares(0, 0, canvas.height / 3, 10);
