@@ -8,10 +8,11 @@ let reversed: string = '.eslaf eb t\'ndluow ecnetnes siht ,dehctiws erew eslaf d
 //console.log(reverse(reversed));
 
 
-function revStr(inStr:string):string{
-  return inStr.split('').reverse().join('');
+function reversingThatString(inputString:string):string{
+  return inputString.split('').reverse().join('');
 };
-console.log(revStr(reversed));
+
+console.log(reversingThatString(reversed));
 
 
 //export = reverse;

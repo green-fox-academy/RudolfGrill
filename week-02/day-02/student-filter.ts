@@ -15,8 +15,8 @@ const students: any[] = [
 function whoHasGotMorecandiesThan4 (list: any[]){
   let candiOwners: string []= [];
   list.forEach(element => {
-      if (element['candies'] >= 4) {
-        candiOwners.push(element);
+      if (element['candies'] > 4) {
+        candiOwners.push(element.name);
       }
   });
   console.log(candiOwners); 
@@ -24,3 +24,13 @@ function whoHasGotMorecandiesThan4 (list: any[]){
 
 whoHasGotMorecandiesThan4(students);
 
+
+function averageCandies(AllStudents: any[]) {
+  let sumOfCandies: number = 0;
+  AllStudents.forEach(element => {
+      sumOfCandies += element.candies;
+  });
+  return sumOfCandies / AllStudents.length
+}
+
+console.log(averageCandies(students));

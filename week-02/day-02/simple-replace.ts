@@ -10,7 +10,6 @@ console.log(example);
 
 export = example;
 
-
 let newexample: string = example.replace("dishwasher","galaxy",);
 
 console.log(newexample);
