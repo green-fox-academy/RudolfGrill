@@ -1,0 +1,26 @@
+'use stict'
+
+export class Person {
+  protected name: string;
+  protected age: number;
+  protected gender: string;
+
+
+  constructor(name: string = 'Jane Doe', age: number = 30, gender: string = "female") {
+    this.name = name;
+    this.age = age;
+    //if (gender !== "male" || gender !== "female"){
+    //  throw new Error('')
+    //}
+    this.gender = gender;
+  }
+
+  introduce() {
+    console.log(`Hi, I\'m ${this.name} a ${this.age} years old ${this.gender}`);
+  }
+
+  getGoal() {
+    console.log("My goal is: Live for the moment!");
+  }
+}
+
