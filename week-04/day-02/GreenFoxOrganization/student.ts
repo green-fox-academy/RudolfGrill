@@ -8,7 +8,7 @@ export class Student extends Person {
   protected previousOrganization: string;
   protected skippedDays: number;
 
-  constructor(name: string, age: number, gender: string, previousOrganization: string= "K&H") {
+  constructor(name?: string, age?: number, gender?: string, previousOrganization: string= "K&H") {
     super(name, age, gender);
     this.previousOrganization = previousOrganization;
     this.skippedDays = 0;

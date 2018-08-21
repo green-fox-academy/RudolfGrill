@@ -6,30 +6,31 @@ import { Mentor } from './mentor';
 import { Sponsor } from './sponsor';
 import { Cohort } from './cohort';
 
-
-//let person1: Person = new Person;
-//let student1: Student = new Student;
-
-
-//person1.introduce();
-//student1.introduce();
-
-
 let people = [];
-let mark = new Person('Mark', 46, 'male');
+
+let mark = new Person("Mark", 46, "male");
 people.push(mark);
+
 let jane = new Person();
 people.push(jane);
-let john = new Student('John Doe', 20, 'male', 'BME');
+
+let john = new Student("John Doe", 20, "male", "BME");
 people.push(john);
+
 let student = new Student();
 people.push(student);
-let gandhi = new Mentor('Gandhi', 148, 'male', 'senior');
+
+let gandhi = new Mentor("Gandhi", 148, "male", "senior");
 people.push(gandhi);
+
 let mentor = new Mentor();
 people.push(mentor);
+
+let elon = new Sponsor("Elon Musk", 46, "male", "SpaceX");
+people.push(elon);
+
 let sponsor = new Sponsor();
-let elon = new Sponsor('Elon Musk', 46, 'male', 'SpaceX');
+people.push(sponsor);
 
 student.skipDays(3);
 
@@ -46,3 +47,9 @@ for (let person of people) {
   person.getGoal();
 }
 
+let awesome = new Cohort("AWESOME");
+awesome.addStudent(student);
+awesome.addStudent(john);
+awesome.addMentor(mentor);
+awesome.addMentor(gandhi);
+awesome.info();

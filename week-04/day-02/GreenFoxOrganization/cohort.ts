@@ -15,12 +15,12 @@ export class Cohort{
     this.mentors = [];
   }
 
-  addStudent(student: Student){
-    this.students.push(student);
+  addStudent(Student){
+    this.students.push(Student);
   }
 
-  addMentor(mentor: Mentor){
-    this.mentors.push(mentor)
+  addMentor(Mentor){
+    this.mentors.push(Mentor)
   }
 
   info() {

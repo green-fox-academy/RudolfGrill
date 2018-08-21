@@ -3,15 +3,15 @@
 import { Person } from './person';
 
 export class Sponsor extends Person {
-  private company: string; 
-  private hiredStudents: number;
+  company: string;
+  hiredStudents: number;
 
-  constructor(name: string = 'Jane Doe', age: number = 30, gender: string = 'female', company: string = 'Google'){
+  constructor(name: string = 'Jane Doe', age: number = 30, gender: string = 'female', company: string = 'Google', hiredStudents: number = 0) {
     super(name, age, gender);
     this.company = company;
-    this.hiredStudents = 0;
+    this.hiredStudents = hiredStudents;
   }
-  
+
   introduce() {
     console.log(`${super.getIntroText()} who represents ${this.company} and hired ${this.hiredStudents} students so far.`);
   }

@@ -5,7 +5,7 @@ import { Person } from './person';
 
 export class Mentor extends Person {
 
-  protected level: string;
+  private level: string;
 
   constructor(name: string = 'Jane Doe', age: number = 30, gender: string = 'female', level: string = 'intermediate') {
     super(name, age, gender);
@@ -17,6 +17,6 @@ export class Mentor extends Person {
   }
 
   intorduce() {
-    console.log(`${this.getIntroText()} ${this.level} mentor.);
+    console.log(`${this.getIntroText()} ${this.level} mentor.`);
   }
 }
