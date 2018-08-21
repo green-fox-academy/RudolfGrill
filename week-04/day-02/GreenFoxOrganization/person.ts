@@ -1,4 +1,4 @@
-'use stict'
+'use strict';
 
 export class Person {
   protected name: string;
@@ -6,7 +6,7 @@ export class Person {
   protected gender: string;
 
 
-  constructor(name: string = 'Jane Doe', age: number = 30, gender: string = "female") {
+  constructor(name: string = 'Jane Doe', age: number = 30, gender: string = 'female') {
     this.name = name;
     this.age = age;
     //if (gender !== "male" || gender !== "female"){
@@ -16,8 +16,13 @@ export class Person {
   }
 
   introduce() {
-    console.log(`Hi, I\'m ${this.name} a ${this.age} years old ${this.gender}`);
+    console.log(this.getIntroText() + '.');
   }
+
+  getIntroText() {
+    return `Hi, I'm ${this.name}, a ${this.age} year old ${this.gender}`;
+  }
+  
 
   getGoal() {
     console.log("My goal is: Live for the moment!");
