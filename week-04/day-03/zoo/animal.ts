@@ -18,10 +18,10 @@ export abstract class Animal {
   
   }
 
-  getName(){} 
-  breed(){}
-  gender(){}
-
+ 
+  abstract getName(): void
+  abstract breed(): void
+  abstract gender(): Animal
 
 
 }
