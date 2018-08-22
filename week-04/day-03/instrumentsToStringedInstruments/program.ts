@@ -3,6 +3,9 @@
 import { Instrument } from './instruments';
 import { StringedInstrument } from './stringedInstrument';
 import { ElectricGuitar } from './electricGuitar';
+import { BassGuitar } from './bassGuitar';
+import { Violin } from './violin';
+
 
 
 console.log('Test 1, create Electric Guitar, Bass Guitar and Violin with default strings.');
