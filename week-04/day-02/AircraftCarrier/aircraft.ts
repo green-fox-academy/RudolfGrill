@@ -6,13 +6,20 @@ class Aircraft {
   private damage: number;
   constructor(typeOfAircraft: string, ammo: number = 0, damage: number) {
     this.typeOfAircraft = typeOfAircraft;
+    if (){
+      
+    }
     this.ammo = ammo;
     this.damage = damage;
   }
-  fight() {
+
+
+
 //fight
 //It should use all the ammos (set it to 0) and it should return the damage it deals
 //The damage is the multiplication of the base damage and the ammos
+  fight() {
+
   }
 }
 
