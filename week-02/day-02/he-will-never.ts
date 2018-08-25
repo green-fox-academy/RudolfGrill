@@ -19,5 +19,5 @@ let hashmap = {
 
 let outArray: string[] = [];
 notSoCrypticMessage.map(elem => outArray.push(hashmap[elem]));
-out= outArray.join();
+out = outArray.join();
 console.log(out);

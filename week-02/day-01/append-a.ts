@@ -11,4 +11,3 @@ let correctedAnimals = animals.map(function(elem) {
 );
  
 console.log(correctedAnimals);
-

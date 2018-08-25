@@ -5,14 +5,12 @@
 
 let factorialThisNumber: number = 5;
 
-function factorio( inPutNumber: number){
+function factorio(inPutNumber: number): any {
     let factorialStart = 1;
-    for (let i = 1; i <= inPutNumber; i++){
+    for (let i = 1; i <= inPutNumber; i++) {
         factorialStart = factorialStart * i;
     }
     console.log(factorialStart);
 }
-
-
 
 factorio(factorialThisNumber);

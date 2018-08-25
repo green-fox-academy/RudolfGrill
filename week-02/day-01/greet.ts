@@ -10,7 +10,7 @@ export { }
 let name: string = "Greenfox";
 
 function greet(inputName: string) {
-    return inputName = "Greetings, dear " + inputName + "!";
+    return inputName = `Greetings, dear ${inputName}!`;
 }
 
 let fulGreeting = greet(name);

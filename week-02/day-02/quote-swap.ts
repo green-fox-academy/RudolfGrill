@@ -14,7 +14,4 @@ function quoteSwap (arr: string[]) {
 console.log(quoteSwap(words));
 // Expected output: "What I cannot create I do not understand."
 
-
-
-
 export = quoteSwap;

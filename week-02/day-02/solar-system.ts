@@ -1,4 +1,4 @@
-export{}
+export { }
 
 'use strict';
 
@@ -12,12 +12,9 @@ export{}
 let planetList: string[] = ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Uranus', 'Neptune'];
 // Expected output: "Mercury", "Venus", "Earth", "Mars", "Jupiter", "Uranus", "Neptune", "Saturn"
 
-function putSaturn(inPutArray: string[]){
+function putSaturn(inPutArray: string[]) {
     inPutArray.push("Saturn");
     console.log(inPutArray);
 }
 
-
 putSaturn(planetList);
-
-

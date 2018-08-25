@@ -11,8 +11,8 @@ let sum: number = 0;
 
 console.log(sum);*/
 
-ai.forEach (function (elem) { 
-  sum += elem; 
+ai.forEach(function (elem) {
+  sum += elem;
 });
 
 console.log(sum);

@@ -1,5 +1,5 @@
 'use strict';
-export{}
+export { }
 
 let example: string = 'In a dishwasher far far away';
 
@@ -10,6 +10,6 @@ console.log(example);
 
 export = example;
 
-let newexample: string = example.replace("dishwasher","galaxy",);
+let newexample: string = example.replace("dishwasher", "galaxy");
 
 console.log(newexample);
