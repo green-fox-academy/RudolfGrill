@@ -1,7 +1,7 @@
 import { numberConverterToHundred, numberConverterOverHundred, overThousand } from "./numberConverter";
 
 'use strict'
-import test from 'tape';
+const test = require('tape')
 
 
 test('Write out one, if input number is 1', t => {
