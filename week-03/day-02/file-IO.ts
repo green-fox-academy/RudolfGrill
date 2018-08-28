@@ -3,7 +3,6 @@ declare function require(path: string): any;
 export {};
 
 const fs = require('fs');
-
 const charEncoding = 'utf-8';
 
 function readFromFile(fileName: string): string {
