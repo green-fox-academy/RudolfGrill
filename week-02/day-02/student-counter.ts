@@ -29,6 +29,7 @@ function sumOfAges(list: any[]): number {
         if (element['candies'] < 5) {
             age += element['age'];
         }
+        
     });
     return age;
 }
