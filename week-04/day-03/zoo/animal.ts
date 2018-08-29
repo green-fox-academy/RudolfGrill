@@ -11,10 +11,10 @@ export abstract class Animal {
 
   constructor(name: string, yearOfBirth: number, isDangerous: boolean) {
     this.name = name;
-    this.yearOfBirth = yearOfBirth;
-    this.isDangerous = isDangerous;
-    this.isHungry = false;
-    this.isSleepy = false;
+    //this.yearOfBirth = yearOfBirth;
+    //this.isDangerous = isDangerous;
+    //this.isHungry = false;
+    //this.isSleepy = false;
   
   }
 

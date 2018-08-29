@@ -19,7 +19,7 @@ export class Aircraft {
     return this.currentAmmo;
   }
 
-  getAllDamage() {
+  getAllDamage(){
     return this.allDamage
   }
 
@@ -29,17 +29,17 @@ export class Aircraft {
     return causedDamage;
   }
 
-  attacked(damageInput: number) {
-    return this.allDamage += damageInput
+  attacked(damageInput: number){
+    return this.allDamage+=damageInput
   }
 
   getReFillNeed() {
-    return this.maxAmmo - this.currentAmmo;
+    return this.maxAmmo-this.currentAmmo;
   }
   refill(fillAmount: number) {
     let emptySpace: number = this.getReFillNeed();
-    this.currentAmmo += fillAmount;
-    return fillAmount - emptySpace;
+    this.currentAmmo+= fillAmount;
+    return fillAmount-emptySpace;
   }
 
   getType() {
@@ -53,7 +53,7 @@ export class Aircraft {
   isPriority() {
     if (this.type === 'F35') {
       return true;
-    } else {
+    } else  {
       return false;
     }
   }

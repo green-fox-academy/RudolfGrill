@@ -1,5 +1,8 @@
 'use strict';
 
+import { Reptile } from './reptile';
+import { Mammal } from './mammal';
+import { Bird } from './bird';
 
 
 

@@ -1,7 +1,8 @@
 import { anagramCheck } from "./anagram";
 
 'use strict'
-import test from 'tape';
+
+import * as test from 'tape';
 
 test('Two inpustring are anagrams', t => {
   let stringOne: string = 'listen';

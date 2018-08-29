@@ -1,7 +1,7 @@
-import { Aircraft } from "./aircraft";
-import { F16 } from "./f16";
-import { F35 } from "./f35";
-import { Carrier } from "./carrier";
+import {Aircraft} from "./aircraft";
+import {F16} from "./f16";
+import {F35} from "./f35";
+import {Carrier} from "./carrier";
 
 'use strict';
 

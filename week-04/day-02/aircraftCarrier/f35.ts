@@ -9,5 +9,4 @@ export class F35 extends Aircraft {
     this.baseDamage = 50;
 
   }
-
 }
