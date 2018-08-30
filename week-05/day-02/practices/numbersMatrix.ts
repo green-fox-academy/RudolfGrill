@@ -9,23 +9,52 @@ function readFromFile(fileName: string) {
   return fs.readFileSync(fileName, charEncoding)
 }
 
-//console.log(readFromFile('matrix.txt'));
-function summedNumbers(inputFile: string): number {
+function writeToAFile(fileName: string, data: any): void {
+  fs.writeFileSync(fileName, data);
+}
+// Sum of each line in a matrix
+function matrixSumOfLines(inputFile: string, outputFile: string) {
   let readMatrix: string = readFromFile(inputFile);
-  let withoutN: string = readMatrix.replace(/\n/gi, ' ');
-  let splittedArray: number[] = withoutN.split(' ').map(function (item) {
-    return parseInt(item, 10)
-  });
-  let summedNumbers: number = 0;
-  for (let i = 0; i < splittedArray.length; i++) {
-    summedNumbers += splittedArray[i];
+  let splittedMatrix = readMatrix.split(' ');
+  let splittedStringMatrix: any[][] = [];
+  let counter: number = 0;
+
+  for (let i: number = 0; i < splittedMatrix.length; i++) {
+    let temporaryArray = splittedMatrix[i].split(' ');
+    splittedStringMatrix.push(temporaryArray);
   }
-  return summedNumbers;
+
+  for (let i: number = 0; i < splittedStringMatrix.length; i++) {
+    for (let j: number = 0; j < splittedStringMatrix.length; j++) {
+      splittedStringMatrix[i][j] = Number(splittedStringMatrix[i][j]);
+      counter = splittedStringMatrix[i].reduce((a, b) => a + b, 0);
+    }
+    splittedStringMatrix[i].push(` the result of this line is ${counter}. \n`);
+    counter = 0;
+  }
+  console.log(splittedStringMatrix);
+
+  writeToAFile(outputFile, splittedStringMatrix)
 }
 
-console.log(summedNumbers('matrix.txt'));
+matrixSumOfLines('matrix.txt', 'The-sum-of-each-line.txt');
 
-/*let readMatrix: string = readFromFile('matrix.txt')
-console.log(readMatrix);
-let splitArray: string[] = readMatrix.split('\n');
-console.log(splitArray);*/
+/*
+// Sum of all the digits in a string matrix
+function matrixSumCounter(inputFile: string, outputFile: string) {
+  let numberArray: number[] = [];
+  let readMatrix: string = readFromFile(inputFile);
+  let partsToErase = readMatrix.replace(/\n/gi, ' ');
+  let splittedMatrix = partsToErase.split(' ');
+
+  splittedMatrix.forEach((element) => {
+    numberArray.push(Number(element));
+  });
+  let sumOfNumbers: number = numberArray.reduce((a, b) => a + b, 0);
+
+  writeToAFile(outputFile, sumOfNumbers)
+  return sumOfNumbers;
+}
+
+console.log(matrixSumCounter('matrix.txt', ));
+*/
