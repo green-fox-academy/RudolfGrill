@@ -22,16 +22,40 @@
 
 declare function require(path: string): any;
 
-const fs = require('fs');
-const path: string = 'marvel.csv';
 //const path: string = 'paramount.csv';
 //const path: string = 'ghibli.csv';
-const charEnc: string = 'utf-8';
 
 /********************************
  * Do not modify the code below *
  ********************************/
 //export default findMostProductiveYear;
+
+
+
+const fs = require('fs');
+
+function readFile(fileName): string {
+  try{
+      let fileContent = fs.readFileSync(`${fileName}.csv`, 'utf-8');
+      return fileContent;
+  } catch {
+      console.log('Cannot find studio, please try again later.');
+      return '';
+  }   
+}
+
+//console.log(readFile('marvel'))
+/*
+const output = fs.readFileSync('marvel.csv', 'utf-8')
+  .trim('\,')
+  .split('\n')
+  .map(line => line.split('\t'))
+  .filter(function (event){
+    return event= number })
+
+
+console.log(output);*/
+
 
 const readLinesFromFile = (path: string, enc: string): string[] => {
   try {

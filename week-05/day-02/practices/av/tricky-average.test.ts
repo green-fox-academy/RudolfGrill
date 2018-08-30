@@ -1,6 +1,9 @@
-import { test } from 'tape';
+'use strict';
 
-import getTrickyAverage from './tricky-average';
+import { test } from 'tape';
+import { getTrickyAverage } from './tricky-average';
+
+
 
 
 test('your test case 1', (t) => {

@@ -11,11 +11,37 @@
  *   [5, 2, 8, -1] -> should return 3.5
  */
 'use strict';
+
 let exampleCase1: number[] = [1, 2, 3];
 let exampleCase2: number[] = [3, 4, 5, 6];
 let exampleCase3: number[] = [5, 2, 8, -1];
 
+const abs = (numberToCheck: number): number => {
+  return numberToCheck < 0 ? -numberToCheck : numberToCheck;
+}
 
+export const getTrickyAverage = (numbers: number[]): number => {
+  let smallestOdd: number = null;
+  let largestEven: number = null;
+  for (let index: number = 0; index < numbers.length; index++) {
+    if ((abs(numbers[index])) % 2 === 0 && largestEven === null) {
+      largestEven = numbers[index];
+    } else if ((abs(numbers[index])) % 2 === 0 && numbers[index] > largestEven) {
+      largestEven = numbers[index];
+    } else if ((abs(numbers[index])) % 2 === 1 && smallestOdd === null) {
+      smallestOdd = numbers[index];
+    } else if ((abs(numbers[index])) % 2 === 1 && numbers[index] > smallestOdd) {
+      smallestOdd = numbers[index];
+    }
+    if (smallestOdd === null || largestEven === null) {
+      throw new Error(`There is no such number to divide!`);
+    }
+    return (largestEven + smallestOdd) / 2;
+  }
+
+}
+
+/*
 const getTrickyAverage = (numbers: number[]): number => {
   let smallestOdd: number = null;
   let largestEven: number = null;
@@ -26,7 +52,7 @@ const getTrickyAverage = (numbers: number[]): number => {
       largestEven = numbers[index];
     } else if (abs(numbers[index]) % 2 === 1 && smallestOdd === null) {
       smallestOdd = numbers[index];
-    } else if (abs(numbers[index]) % 2 === 1 && numbers[index] < smallestOdd) {
+    } else if (abs(numbers[index]) % 2 === 1 && numbers[index] > smallestOdd) {
       smallestOdd = numbers[index];
     }
   }
@@ -34,17 +60,14 @@ const getTrickyAverage = (numbers: number[]): number => {
     throw new Error(`There is no such number`);
   }
   return (smallestOdd + largestEven) / 2;
-
+ 
 }
-
+ 
 const abs = (numberToCheck: number): number => {
   return numberToCheck < 0 ? -numberToCheck : numberToCheck;
 }
-
+*/
 
 console.log(getTrickyAverage(exampleCase1));
 console.log(getTrickyAverage(exampleCase2));
 console.log(getTrickyAverage(exampleCase3));
-
-
-export default getTrickyAverage;
