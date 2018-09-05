@@ -1,3 +1,4 @@
+'use strict';
 export { };
 // -  Create a variable named `integers` with the following content: `[4, 5, 6, 7]`
 // -  Log each the element of `integers` to the console*

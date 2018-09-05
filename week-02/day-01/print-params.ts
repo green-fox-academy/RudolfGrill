@@ -6,7 +6,7 @@ export { }
 //    (can have multiple number of arguments)
 
 
-function printParams(...anything: any[]) {
+function printParams(...anything: any[]):any {
     anything.map(function (anything: any) {
         console.log(anything);
     });

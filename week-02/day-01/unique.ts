@@ -10,11 +10,10 @@ export { }
 
 //let list: any = [1, 11, 34, 11, 52, 61, 1, 34];
 
-function unique(array) {
+function unique(array): any {
     let newArray: number[] = [];
     array.forEach(function (arrayElem) {
-        if
-        (!newArray.some(function (newArrayElem) {
+        if (!newArray.some(function (newArrayElem) {
             return arrayElem == newArrayElem;
         })) {
             newArray.push(arrayElem);

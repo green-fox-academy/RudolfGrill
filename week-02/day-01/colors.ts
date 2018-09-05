@@ -14,4 +14,3 @@ let colors: any [][] = [["lime", "forest green", "olive", "pale green", "spring"
 console.log(colors[0])
 console.log(colors[1])
 console.log(colors[2])
-console.log(colors[4])

@@ -1,5 +1,5 @@
 'use strict';
-export{}
+export { }
 // -  Create (dynamically*) a two dimensional list
 //    with the following matrix**. Use a loop!
 //
@@ -14,17 +14,20 @@ export{}
 // ** Relax, a matrix is just like an array
 
 
-let matrix = [];
-let matrixSize = 4;
-for (let i: number = 0; i < matrixSize; i++) {
-    let matrixRow = [];
-    for (let j: number = 0; j < matrixSize - i -1 ; j++) {
-        matrixRow.push(0);
+
+let matrixNew = [];
+let matrixSizeNew: number = 4;
+
+for (let i: number = 0; i < matrixSizeNew; i++) {
+    let matrixSor = [];
+    for (let ZeroAdderBeforeOne: number = 0; ZeroAdderBeforeOne < matrixSizeNew -i- 1; ZeroAdderBeforeOne++) {
+        matrixSor.push(0);
     }
-    matrixRow.push(1);
-    for (let k: number = 0; k < i; k++ ) {
-        matrixRow.push(0);  
+    matrixSor.push(1);
+    for (let ZeroAfterOne: number = 0; ZeroAfterOne < i ; ZeroAfterOne++) {
+        matrixSor.push(0);
     }
-    matrix.push(matrixRow);
+    matrixNew.push(matrixSor);
 }
-console.log(matrix);
+console.log(matrixNew);
+

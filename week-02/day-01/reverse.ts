@@ -8,8 +8,8 @@
 
 let numList = [3, 4, 5, 6, 7];
 
-//let numlist = [3, 4, 5, 6, 7].reverse();
-//console.log("Reversed array is :" + numlist);
+let numlist = [3, 4, 5, 6, 7].reverse();
+console.log("Reversed array is :" + numlist);
 
 
 let tempList = [];
@@ -17,5 +17,6 @@ for (let i = 0; i < numList.length; i++) {
   tempList.unshift(numList[i]);
 }
 console.log(tempList);
+
 //numList = tempList.map(change => change);
 //console.log(numList);
