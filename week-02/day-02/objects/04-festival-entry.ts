@@ -44,4 +44,6 @@ function securityCheck(queue: Festivalgoer[]): Festivalgoer[] {
   return allowedFestivalgoers;
 }
 
+console.log(securityCheck(queue));
+
 export = securityCheck;

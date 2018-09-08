@@ -9,7 +9,7 @@ let shopItems: any[] = ['Cupcake', 2, 'Brownie', false];
 // Create a function called sweets() which takes the list as a parameter.
 // Expected output: "Cupcake", "Croissant", "Brownie", "Ice cream"
 
-function sweets (arr: any[]) {
+function sweets(arr: any[]): any {
   arr.splice(1, 1, 'Croissant');
   arr.splice(3, 1, "Ice cream");
   return arr;

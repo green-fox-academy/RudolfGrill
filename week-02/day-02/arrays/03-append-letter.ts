@@ -9,7 +9,7 @@ let far: string[] = ['bo', 'anacond', 'koal', 'pand', 'zebr'];
 // The output should be: 'boa', 'anaconda', 'koala', 'panda', 'zebra'
 //export = append
 
-function appendA(whatIsYourArray) {
+function appendA(whatIsYourArray): any {
   let newArray: any[] = [];
   whatIsYourArray.forEach(function (elem) {
     elem = elem + "a";

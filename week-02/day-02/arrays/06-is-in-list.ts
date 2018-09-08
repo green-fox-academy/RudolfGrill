@@ -8,7 +8,7 @@ let numbersToCheck: number[] = [4, 8, 19, 16];
 function checkNums(arr: number[]) {
   let results: boolean[] = [];
   for (let i: number = 0; i < numbersToCheck.length; i++) {
-      results.push(arr.some(elem => elem === numbersToCheck[i]));
+    results.push(arr.some(elem => elem === numbersToCheck[i]));
   }
   return results.every(elem => elem === true);
 }

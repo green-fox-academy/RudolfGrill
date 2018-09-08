@@ -13,9 +13,10 @@ const students: any[] = [
 // create a function that takes a list of students and logs: 
 // - how many candies are owned by students
 
-function howManyCandies(eachStudent: any[]) {
+
+function howManyCandies(inputArray: any[]) {
     let studentCandies: number = 0;
-    eachStudent.forEach(object => studentCandies += object.candies);
+    inputArray.forEach(object => studentCandies += object.candies);
     console.log(studentCandies);
 };
 
@@ -23,16 +24,16 @@ howManyCandies(students);
 // create a function that takes a list of students and logs:
 // - Sum of the age of people who have lass than 5 candies
 
-function sumOfAges(list: any[]): number {
-    let age: number = 0;
-    list.forEach(element => {
+function sumOfAgesStudents(inputArray: any[]): number {
+    let studentsAges: number = 0;
+    inputArray.forEach(element => {
         if (element['candies'] < 5) {
-            age += element['age'];
+            studentsAges += element['age'];
         }
-        
-    });
-    return age;
-}
-console.log(sumOfAges(students));
+    }
 
-sumOfAges(students);
+    );
+    return studentsAges;
+}
+
+console.log(sumOfAgesStudents(students));
