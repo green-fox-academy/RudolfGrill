@@ -1,13 +1,13 @@
 class blogPost {
-  private authorName: string;
+  /*private authorName: string;
   private title: string;
   private text: string;
-  private publicationDate: string;
-  constructor(authorName: string, title: string, text: string, publicationDate: string) {
-    this.authorName = authorName;
+  private publicationDate: string;*/
+  constructor(private authorName: string, private title: string, private text: string, private publicationDate: string) {
+    /*this.authorName = authorName;
     this.title = title;
     this.text = text;
-    this.publicationDate = publicationDate;
+    this.publicationDate = publicationDate;*/
   }
 }
 

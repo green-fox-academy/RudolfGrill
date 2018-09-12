@@ -40,34 +40,7 @@ export const getTrickyAverage = (numbers: number[]): number => {
   }
 
 }
-
-/*
-const getTrickyAverage = (numbers: number[]): number => {
-  let smallestOdd: number = null;
-  let largestEven: number = null;
-  for (let index: number = 0; index < numbers.length; index++) {
-    if (abs(numbers[index]) % 2 === 0 && largestEven === null) {
-      largestEven = numbers[index];
-    } else if (abs(numbers[index]) % 2 === 0 && numbers[index] > largestEven) {
-      largestEven = numbers[index];
-    } else if (abs(numbers[index]) % 2 === 1 && smallestOdd === null) {
-      smallestOdd = numbers[index];
-    } else if (abs(numbers[index]) % 2 === 1 && numbers[index] > smallestOdd) {
-      smallestOdd = numbers[index];
-    }
-  }
-  if (smallestOdd === null || largestEven === null) {
-    throw new Error(`There is no such number`);
-  }
-  return (smallestOdd + largestEven) / 2;
  
-}
- 
-const abs = (numberToCheck: number): number => {
-  return numberToCheck < 0 ? -numberToCheck : numberToCheck;
-}
-*/
-
 console.log(getTrickyAverage(exampleCase1));
 console.log(getTrickyAverage(exampleCase2));
 console.log(getTrickyAverage(exampleCase3));
