@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Cocktails</title>
+  </head>
+  <body>
+    <h1>Cocktails</h1>
+    <ul>
+      <% coctailsNames.forEach(coctail.names => { %>
+        <li>
+          <%= coctail.names %>
+        </li>
+      <% }) %>
+    </ul>
+  </body>
+</html>
