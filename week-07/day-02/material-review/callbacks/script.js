@@ -45,10 +45,9 @@ window.onload = () => {
     isClicked = !isClicked;
   });
 
-  /*
+
   timerButton.addEventListener('click', () => {
     console.log(timer);
     clearInterval(timer);
   });
-  */
 }
