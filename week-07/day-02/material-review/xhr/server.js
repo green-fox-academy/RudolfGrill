@@ -2,10 +2,11 @@ const express = require('express');
 const path = require('path');
 const fetch = require('node-fetch');
 const cors = require('cors');
-require('dotenv').config();
+//require('dotenv').config();
 const app = express();
 const { cocktailList } = require('./data.js');
-const PORT = process.env.PORT;
+//const PORT = process.env.PORT;
+const PORT = 3000;
 
 app.use(cors());
 app.use('/assets', express.static('assets'));
@@ -21,7 +22,7 @@ app.get('/api/cocktails', (req, res) => {
 app.get('/api/nytimes/:q', (req, res) => {
   let url = [
     'https://api.nytimes.com/svc/search/v2/articlesearch.json',
-    `?api-key=${process.env.NYTIMES_API_KEY}`,
+    `?api-key=b1d817d4c7ba42fba825c441a198d475`,
     `&q=${req.params.q}`,
   ].join('');
 

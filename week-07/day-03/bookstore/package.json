@@ -1,15 +1,17 @@
 {
-  "name": "day-03",
+  "name": "bookstore",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "dependencies": {
+    "express": "^4.16.3",
+    "mysql": "^2.16.0"
+  },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "mysql": "^2.16.0"
-  }
+  "license": "ISC"
 }
