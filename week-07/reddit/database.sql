@@ -5,3 +5,9 @@ CREATE TABLE posts (
   timestamp TIMESTAMP NOT NULL,
   score INTEGER NOT NULL DEFAULT 0
   );
+
+
+SELECT * FROM posts
+WHERE id= ${id};
+
+
