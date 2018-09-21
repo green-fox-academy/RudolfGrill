@@ -80,7 +80,7 @@ app.put('/post/:id/upvote', jsonParser, (req, res) => {
   });
 });
 
-app.put('/post/<id>/downvote', (req, res) => { 
+app.put('/post/<id>/downvote', (req, res) => {
   connection.query(`UPDATE posts SET score = score - 1 where id = ${req.params.id};`, (err, selctedPost) => {
     if (err) {
       console.log(err.toString());
@@ -103,7 +103,18 @@ app.put('/post/<id>/downvote', (req, res) => {
   });
 });
 
-app.delete('/post/<id>', (req, res) => { });
+
+
+app.delete('/post/:id', (req, res) => {
+  connection.query(`DELETE FROM posts WHERE id=${req.params.id};`, (err) => {
+    if (err) {
+      console.log(err.toString());
+      res.satus(500).send('Database error');
+      return;
+    }
+    res.status(200).json(`The post is deleted}`);
+  });
+});
 
 app.put('/post/<id>', (req, res) => { });
 
