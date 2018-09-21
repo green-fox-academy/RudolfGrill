@@ -64,9 +64,6 @@ app.put('/post/:id/upvote', jsonParser, (req, res) => {
       res.satus(500).send('Database error');
       return;
     }
-    /*res.status(200).json({
-      result: selctedPost
-    });*/
     connection.query(`SELECT * FROM posts WHERE id=${req.params.id};`, (err, masra) => {
       if (err) {
         console.log(err.toString());
@@ -80,24 +77,21 @@ app.put('/post/:id/upvote', jsonParser, (req, res) => {
   });
 });
 
-app.put('/post/<id>/downvote', (req, res) => {
+app.put('/post/:id/downvote', jsonParser, (req, res) => {
   connection.query(`UPDATE posts SET score = score - 1 where id = ${req.params.id};`, (err, selctedPost) => {
     if (err) {
       console.log(err.toString());
       res.satus(500).send('Database error');
       return;
     }
-    /*res.status(200).json({
-      result: selctedPost
-    });*/
-    connection.query(`SELECT * FROM posts WHERE id=${req.params.id};`, (err, masra) => {
+    connection.query(`SELECT * FROM posts WHERE id=${req.params.id};`, (err, downvotedPost) => {
       if (err) {
         console.log(err.toString());
         res.satus(500).send('Database error');
         return;
       }
       res.status(200).json({
-        result: masra
+        result: downvotedPost
       });
     })
   });
@@ -112,16 +106,32 @@ app.delete('/post/:id', (req, res) => {
       res.satus(500).send('Database error');
       return;
     }
-    res.status(200).json(`The post is deleted}`);
+    res.status(200).send(`The post is deleted where id was ${req.params.id}`);
   });
 });
 
-app.put('/post/<id>', (req, res) => { });
 
+//UPDATE posts SET title = "gaswsdsg", url = "http://965gag.com"  WHERE id = 20;
 
-
-
-
+app.put('/post/:id', jsonParser, (req, res) => {
+  connection.query(`UPDATE posts SET title="${req.body.title}", url="${req.body.url}" WHERE id=${req.params.id};`, (err, result) => {
+    if (err) {
+      console.log(err.toString());
+      res.satus(500).send('Database error');
+      return;
+    }
+  });
+  connection.query(`SELECT * FROM posts WHERE id=${req.params.id};`, (err, updatedPost) => {
+    if (err) {
+      console.log(err.toString());
+      res.satus(500).send('Database error');
+      return;
+    }
+    res.status(200).json({
+      post: updatedPost
+    });
+  })
+});
 
 app.listen(PORT, () => {
   console.log(`server is up and runing on port ${PORT}`);
