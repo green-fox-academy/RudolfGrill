@@ -6,6 +6,8 @@ const jsonParser = bodyParser.json();
 const path = require('path');
 const PORT = 8080;
 
+app.use('/assets', express.static('assets'));
+
 const connection = mysql.createConnection({
   host: 'localhost',
   user: 'root',
@@ -13,6 +15,9 @@ const connection = mysql.createConnection({
   database: 'REDDIT',
 });
 
+app.get('/', (req, res) => {
+  res.sendfile(path.join(__dirname, 'index.html'));
+});
 
 connection.connect((err) => {
   if (err) {
@@ -34,8 +39,6 @@ app.get('/posts', (req, res) => {
     });
   });
 });
-
-
 
 app.post('/posts', jsonParser, (req, res) => {
   connection.query(`INSERT INTO posts(title, url) values("${req.body.title}", "${req.body.url}");`, (err, result) => {
@@ -97,8 +100,6 @@ app.put('/post/:id/downvote', jsonParser, (req, res) => {
   });
 });
 
-
-
 app.delete('/post/:id', (req, res) => {
   connection.query(`DELETE FROM posts WHERE id=${req.params.id};`, (err) => {
     if (err) {
@@ -109,9 +110,6 @@ app.delete('/post/:id', (req, res) => {
     res.status(200).send(`The post is deleted where id was ${req.params.id}`);
   });
 });
-
-
-//UPDATE posts SET title = "gaswsdsg", url = "http://965gag.com"  WHERE id = 20;
 
 app.put('/post/:id', jsonParser, (req, res) => {
   connection.query(`UPDATE posts SET title="${req.body.title}", url="${req.body.url}" WHERE id=${req.params.id};`, (err, result) => {

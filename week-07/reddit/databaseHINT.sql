@@ -14,7 +14,9 @@ CREATE TABLE posts (
 
 
 
-SELECT * FROM posts
+SELECT * FROM posts;
+
+
 WHERE id= ${id};
 
 

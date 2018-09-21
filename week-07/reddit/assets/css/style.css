@@ -1,0 +1,16 @@
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+#postContainer {
+  width: 300px;
+  border: 5px solid gray;
+  padding: 25px;
+  margin: 25px;
+  color: red;
+  position: absolute;
+  top: 8px;
+  left: 16px;
+  font-size: 18px;
+}
