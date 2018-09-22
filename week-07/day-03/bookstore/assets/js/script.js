@@ -7,7 +7,7 @@ window.onload = () => {
 
   myRequest.open('GET', `${host}/books`, true);
 
-  console.log(myRequest)
+  console.log(myRequest);
 
   myRequest.onload = () => {
     if (myRequest.status === 200) {

@@ -1,30 +1,31 @@
+'use strict'
 const express = require('express');
-const path = require('path');
-
 const app = express();
+let PORT = 8080;
+const path = require('path');
+const fetch = require('node-fetch');
 
-const PORT = 3000;
+app.use('/assets', express.static('assets'));
 
 app.get('/', (req, res) => {
-  console.log('M&M');
-  //res.sendFile(path.join(__dirname, 'index.html'));
+  res.sendFile(path.join(__dirname, 'index.html'));
 });
-app.get('/v1/gifs/random', (req, res) => {
+
+app.get('/api/giphy/:q', (req, res) => {
   let url = [
-    'https://github.com/Giphy/giphy-js-sdk-core',
-    `?api-key=1DcDMZCCWcadxlJ9u3VcOVE3SsEfM2Jd`,
+    'https://api.giphy.com/v1/gifs/search',
+    `?api_key=4algdPetGwm5vz6jFvolLGg16DIxK4NX`,
     `&q=${req.params.q}`,
+    `&limit=16&offset=0&rating=R&lang=en`
   ].join('');
 
   fetch(url)
-  .then((resp) => (resp.json()))
-  .then(response => {
-    res.json(response);
-  });
+    .then((resp) => (resp.json()))
+    .then(response => {
+      res.json(response);
+    });
 });
 
-
-
 app.listen(PORT, () => {
-  console.log(`App is up and running on port ${PORT}`);
+  console.log(`The server is up and running on ${PORT}`);
 });
