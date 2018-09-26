@@ -1,0 +1,49 @@
+body {
+  background:#3C8AE6;
+
+}
+
+table{
+  border-collapse: collapse;
+  margin: auto;
+
+}
+table tbody td[data-currency="$"]::before {
+  content: "$ ";
+}
+
+thead tr:first-child{
+  border-radius: 10px 0 0 0;
+
+
+}
+thead tr:first-child{
+  border-radius: 10px 0px 0px 0px;
+
+}
+thead tr th{
+  background: black;
+  color: antiquewhite;
+  height: 50px;
+  width: 200px;
+
+}
+
+tbody tr td{
+  height: 20px;
+  width: 200px;
+  padding: 20px;
+
+
+}
+/*
+table tbody tr td[data-currency]{
+  background: rgb(197, 195, 195);
+}*/
+
+table tbody tr:nth-child(odd){
+  background: #EAEAEA;
+}
+table tbody tr:nth-child(even){
+  background: #FFFFFF;
+}
