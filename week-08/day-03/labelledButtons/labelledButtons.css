@@ -1,0 +1,27 @@
+*{
+  background-color: #343A42;
+}
+
+div{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  align-content: space-between;
+  justify-content: center;
+  margin: 50px;
+}
+
+button{
+  font-size: 20px;
+  padding: 30px 30px;
+  background-color: #21292E;
+  border: none;
+
+}
+.delete{
+  visibility: hidden;
+}
+.sure{
+  visibility: collapse;
+
+}
