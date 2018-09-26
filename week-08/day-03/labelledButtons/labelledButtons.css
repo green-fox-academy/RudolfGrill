@@ -1,12 +1,12 @@
 *{
   background-color: #343A42;
+  
 }
 
 div{
   display: flex;
   align-items: center;
   flex-direction: column;
-  align-content: space-between;
   justify-content: center;
   margin: 50px;
 }
@@ -16,12 +16,58 @@ button{
   padding: 30px 30px;
   background-color: #21292E;
   border: none;
+  align-items: stretch;
 
 }
-.delete{
-  visibility: hidden;
-}
-.sure{
-  visibility: collapse;
 
+.delete {
+  position: relative;
+  
 }
+
+.delete:after {
+	left: 100%;
+	top: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-color: rgba(136, 183, 213, 0);
+	border-left-color: #21292E;
+	border-width: 10px;
+	margin-top: -10px;
+}
+
+.sure {
+	position: relative;
+}
+
+.sure:after {
+	left: 100%;
+	top: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-color: rgba(136, 183, 213, 0);
+	border-left-color: #21292E;
+	border-width: 10px;
+	margin-top: -10px;
+}
+span {
+  background-color: rgb(31, 28, 28);
+  display: flex;
+  font-size: 40px;
+  line-height: 50px;
+  margin: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  text-align: center;
+  padding-top: 7px;
+}
+
