@@ -12,38 +12,41 @@
 
 <body>
 
-  <form>
+  <form id="buttonDisableForm" action="#" method="POST" enctype="application/json">
     <fieldset>
 
       <fieldset>
         <legend>What is your favourite pet?</legend>
 
-        <div>
-          <input type="radio" id="dog" name="pet" value="dog" />
+        <div id="favouritePetDiv">
+          <input type="radio" id="dog" name="favouritePet" value="dog" />
           <label for="dog">Dog</label><br>
-        
-          <input type="radio" id="cat" name="pet" value="cat" />
+
+          <input type="radio" id="cat" name="favouritePet" value="cat" />
           <label for="cat">Cat</label><br>
-      
-          <input type="radio" id="goldfish" name="pet" value="goldfish" />
+
+          <input type="radio" id="goldfish" name="favouritePet" value="goldfish" />
           <label for="goldfish">Viktor the goldfish</label>
         </div>
-        
 
       </fieldset>
       <fieldset>
         <legend>Do you want to sign up for cat facts?</legend>
 
-        <div>
-          <input type="radio" id="yes" name="facts" value="Yes" />
+        <div id="catFactDiv">
+          <input type="radio" id="yes" name="facts" value="yes" />
           <label for="yes">Yes</label> <br>
-       
-          <input type="radio" id="no" name="facts" value="No" />
+
+          <input type="radio" id="no" name="facts" value="no" />
           <label for="no">No</label>
         </div>
       </fieldset>
-      <button id="loveCats">I love cats</button>
-      <button id="signUp">Sign up</button>
+
+      <div id="buttons">
+        <button type="loveCats" disabled="disabled">I love cats</button>
+        <button type="submit" disabled="disabled">Sign up</button>
+      </div>
+
     </fieldset>
   </form>
 

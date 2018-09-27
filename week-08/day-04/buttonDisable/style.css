@@ -18,5 +18,6 @@ fieldset{
 button{
   border-radius: 10px;
   background-color: rgb(54, 101, 139);
+  color: black;
   float:  right;
 }
