@@ -1,32 +1,72 @@
-* {
-  background-color:#EAEAEA;
-}
 body {
+  background: rgb(204, 204, 204);
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
   display: flex;
-  align-items: center;
   justify-content: center;
-  margin: 20%;
-}
-.container{
-  background-color: white;
-  size: 200px,300px;
+  align-items: center;
 }
 
-input[type="text"],[type="password"]{
-  display: block;
+fieldset {
+  display: flex;
+  border: none;
+  background: rgb(255, 255, 255);
+  padding: 80px;
+  padding-top: 25px;
+  padding-bottom: 25;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
   border-radius: 5px;
-  margin-bottom: 20px;
-  padding: 10px;
-
 }
 
-#name:active{
-  border: green;
+label {
+  font-weight: normal;
+  font-size: 12px;
+  color: rgb(61, 61, 61);
 }
 
-#login{
-  border-radius: 15px;
-  width: 80px;
-  background-color: black;
+.container p {
+
+  font-size: 33px;
+  margin-bottom: 30px;
+  margin-top: 15px;
+}
+
+button {
+  border: none;
+  margin: 20px;
+  text-align: center;
+  line-height: 25px;
+  vertical-align: middle;
+  background: black;
   color: white;
+  border-radius: 15px;
+  width: 100px;
+  height: 25px;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  margin-left: 0px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 10px;
+  margin-right: 7px;
+  color: #3d3d3d;
+  float: right;
+  margin-top: 15px;
+}
+
+input:focus {
+  outline-color: rgb(27, 187, 27);
+}
+
+input {
+  width: 270px;
+  border-radius: 2px;
+}
+.password{
+  background: url(eye-regular.svg) no-repeat 95% right;
 }
