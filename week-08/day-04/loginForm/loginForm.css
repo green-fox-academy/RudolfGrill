@@ -1,0 +1,32 @@
+* {
+  background-color:#EAEAEA;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20%;
+}
+.container{
+  background-color: white;
+  size: 200px,300px;
+}
+
+input[type="text"],[type="password"]{
+  display: block;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  padding: 10px;
+
+}
+
+#name:active{
+  border: green;
+}
+
+#login{
+  border-radius: 15px;
+  width: 80px;
+  background-color: black;
+  color: white;
+}
