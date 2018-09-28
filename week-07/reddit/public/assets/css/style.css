@@ -1,19 +1,44 @@
-*{
-margin: 0px;
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+div{
+  flex-direction: row;
+
+}
+
+#header{
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 30px;
+  font-weight: bold;
+  padding: 30px; 
+
 }
 
 img {
   max-width: 100%;
 }
 
-#postContainer {
+#postcontainer {
   width: 300px;
-  border: 5px solid gray;
+  border: 1px solid gray;
   padding: 25px;
   margin: 25px;
-  color: red;
+  color: #ECECEC;
   position: absolute;
   top: 8px;
   left: 16px;
   font-size: 18px;
+}
+
+#title{
+color: #ECECEC;
+}
+#redditicon{
+  text-align: left;
+  size: 50px;
+  color: #FF0026;
 }
