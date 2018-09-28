@@ -11,43 +11,47 @@
 </head>
 
 <body>
-
   <form id="buttonDisableForm" action="#" method="POST" enctype="application/json">
     <fieldset>
 
       <fieldset>
+
         <legend>What is your favourite pet?</legend>
 
         <div id="favouritePetDiv">
+
           <input type="radio" id="dog" name="favouritePet" value="dog" />
           <label for="dog">Dog</label><br>
-
           <input type="radio" id="cat" name="favouritePet" value="cat" />
           <label for="cat">Cat</label><br>
-
           <input type="radio" id="goldfish" name="favouritePet" value="goldfish" />
           <label for="goldfish">Viktor the goldfish</label>
+
         </div>
 
       </fieldset>
       <fieldset>
         <legend>Do you want to sign up for cat facts?</legend>
-
         <div id="catFactDiv">
+
           <input type="radio" id="yes" name="facts" value="yes" />
           <label for="yes">Yes</label> <br>
-
           <input type="radio" id="no" name="facts" value="no" />
           <label for="no">No</label>
+
         </div>
+
       </fieldset>
 
       <div id="buttons">
-        <button type="loveCats" disabled="disabled">I love cats</button>
-        <button type="submit" disabled="disabled">Sign up</button>
-      </div>
 
+        <button type="submit" disabled="disabled">Sign up</button>
+        <button type="loveCats" disabled="disabled">I love cats</button>
+
+      </div>
+      
     </fieldset>
+
   </form>
 
 </body>

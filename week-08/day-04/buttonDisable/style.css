@@ -16,8 +16,18 @@ fieldset{
 }
 
 button{
+  margin: 5px;
   border-radius: 10px;
+  border-color: black;
   background-color: rgb(54, 101, 139);
   color: black;
-  float:  right;
+}
+
+#ilovecats{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+button:active{
+  border-color: white;
 }
