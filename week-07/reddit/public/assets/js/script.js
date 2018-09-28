@@ -1,20 +1,33 @@
 'use strict'
 
 window.onload = () => {
-  const host = 'http://localhost:8080/';
-  const myRequest = new XMLHttpRequest();
-  const PostParent = document.querySelector('#postContainer');
+  const http = 'http://localhost:8080';
+  const http = new XMLHttpRequest();
+  const pageParent = document.querySelector('#postcontainer');
+  const pageMainChild = document.querySelector('#content');
+  const submitButton = document.querySelector("button[type=submit]")
 
-  myRequest.open('GET', `${host}posts`, true);
+  http.open('GET', `${host}/posts`, true);
 
-  console.log(myRequest);
+  //console.log(myRequest);
 
-  myRequest.onload = () => {
+  http.onload = () => {
     if (myRequest.status === 200) {
       const postsList = JSON.parse(myRequest.response).posts;
+
       postsList.forEach(post => {
-        let newRow = document.createElement('tr');
-        PostParent.appendChild(newRow);
+        let separateContainers = document.createElement("div");
+        separateContainers.className = "container";
+
+        let separatePost = document.createElement("div");
+        separatePost.className = "post";
+
+        let separatePostContent = document.createElement("div");
+        separatePostContent.className = "postcontent";
+
+
+
+        
       });
     }
 
@@ -28,10 +41,10 @@ window.onload = () => {
   myRequest.send();
 
   fetch(`${host}posts`)
-  .then((resp) => (resp.json()))
-  .then(response => {
-    console.log(response);
-  });
+    .then((resp) => (resp.json()))
+    .then(response => {
+      console.log(response);
+    });
 
 }
 
