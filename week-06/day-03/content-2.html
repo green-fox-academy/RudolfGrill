@@ -24,7 +24,7 @@
     OR
     <script src="content-2.js"></script> -->
   <script>
-    let placeholderFinder = document.getElementsByTagName('li');
+    let placeholderFinder = document.querySelectorAll('li');
     let replacer = ['apple', 'banana', 'cat', 'dog'];
     console.log(placeholderFinder);
     for (let i = 0; i < placeholderFinder.length; i++) {
@@ -34,7 +34,7 @@
     let ulTag = document.querySelector('ul');
     console.log(ulTag)
     ulTag.setAttribute('style', 'background-color:limegreen')
-    // ulTag.style('background-color', 'limegreen')
+    ulTag.style('background-color', 'limegreen')
     console.log(ulTag)
   </script>
 </body>

@@ -54,44 +54,6 @@ app.get('/appenda/:appendable', (req, res) => {
     })
   };
 });
-/*
-
-function sumF(n) {
-  if (n <= 0) {
-    return 0;
-  } else {
-    return n + sum(n - 1);
-  }
-}
-
-function factorioF(n) {
-  if (n <= 0) {
-    return 1;
-  } else {
-    factor(n - 1);
-    return n * factor(n - 1);
-  }
-
-}
-
-app.post('/dountil/:action', jsonParser, (req, res) => {
-  let summingUntil = sumF(req.body.until);
-  let factoringUntil = factorioF(req.body.until);
-  if (req.params.action === 'sum') {
-    res.json({
-      "result": summingUntil
-    })
-  } else if (req.params.action === 'factor') {
-    res.json({
-      "result": factoringUntil
-    })
-  } else {
-    res.json({
-      error: "Please provide a number!"
-    })
-  }
-})
-*/
 
 function sumUntil(inputNumber) {
   if (inputNumber > 0) {

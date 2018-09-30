@@ -1,3 +1,25 @@
-.thumbnail {
-  width: 100px;
+body {
+  margin: 0 auto;
+  background: royalblue;
+  height: 95%;
+  width: 100%;
+}
+#greatings{
+  display: flex;
+  justify-content: center;
+}
+
+
+#gifContainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+#gifElements{
+  
 }

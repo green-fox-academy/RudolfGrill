@@ -21,14 +21,29 @@ const cocktails = [
 
 const alcoholList = ['gin', 'vodka', 'rum', 'tequila'];
 
-app.get('/cocktails', (req, res) => {
-  let coctailsNames = cocktails.filter(cocktail => {
-    return cocktail.name === req.params.cocktails;
-  });
-  res.render('cocktails', {
-    coctailsNames,
-  });
-});
+app.get('/', (req, res) => {
+  if (req.query.alcohol) {
+    let filteredByType = cocktails.filter(cocktail => {
+      return cocktail.contains.includes(req.query.alcohol)
+    });
+    res.render('cocktails', {
+      title: 'Cocktails',
+      welcome: 'Welcome to the bar',
+      ingredient: req.query.alcohol,
+      cocktails: filteredByType,
+      alcoholList,
+    });
+  } else {
+    res.render('cocktails', {
+      title: 'Cocktails',
+      welcome: 'Welcome to my bar',
+      cocktails,
+      alcoholList,
+
+    })
+  }
+})
+
 
 app.get('/alcoholList', (req, res) => {
   res.render('alcoholList', {
