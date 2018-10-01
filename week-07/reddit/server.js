@@ -16,7 +16,7 @@ const connection = mysql.createConnection({
 });
 
 app.get('/', (req, res) => {
-  res.sendfile(path.join(__dirname, 'index.html'));
+  res.sendfile(path.join(__dirname, 'reddit.html'));
 });
 
 connection.connect((err) => {
