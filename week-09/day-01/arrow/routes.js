@@ -10,6 +10,8 @@ app.get('/yondu', (req, res) => {
       speed: speed,
     }).send();
   } else {
-    res.status(400).json({ error: "I am Groot!" }).send();
+    res.status(400).json({ error: "No more games with me, boy!" }).send();
   }
 });
+
+module.exports = { app };
