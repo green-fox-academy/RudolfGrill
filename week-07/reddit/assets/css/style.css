@@ -1,19 +1,37 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+
+}
+
+body {
+  margin: 0 auto;
+  width: 100vw;
+}
+
 #wrapper{
   display:flex;
   flex-direction: column;
+  flex-wrap: nowrap;
   width: 100vw; 
   height: 800px;
   background: gray; 
 }
+
 header{
   background-image: url(/assets/css/imgs/38133944-space-hd-wallpapers.jpg);
   background-repeat: no-repeat;
+  text-align: center;
+
  }
+
 #contentcontainer{
   display: flex;
   background-color: blue;
-  width: 100%;
+  width: 80%;
 }
+
 #postcontainer{
   display: flex;
   flex-direction: column;
@@ -23,9 +41,19 @@ header{
 }
 
 #rightcontainer{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
   background-color: blueviolet;
   width: 30%;
   height: 100%;
+}
+
+#related{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .postitem{
@@ -42,6 +70,7 @@ header{
   width: 20%;
 
 }
+
 .postcontent{
   display: flex;
   flex-direction: column;
@@ -49,11 +78,13 @@ header{
   background-color: yellow;
   width: 80%;
 }
+
 .interaction{
   display: flex;
   justify-content: space-around;
   background-color: tomato;
 }
+
 button{
   width: 150px;
   height: 30px;
@@ -63,13 +94,17 @@ button{
 
 .upvote{
   display: flex;
-  background-color: fuchsia;
+  width: 30px;
+  height: 30px;
 }
+
 .score{
   display: flex;
   background-color: lawngreen;
 }
+
 .downvote{
   display: flex;
-  background-color: olive; 
+  width: 30px;
+  height: 30px;
 }
