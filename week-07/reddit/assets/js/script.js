@@ -4,8 +4,40 @@ window.onload = () => {
 
   const host = 'http://localhost:8080';
   const postrequest = new XMLHttpRequest();
+  const upvoterequest = new XMLHttpRequest();
+  const downvoterequest = new XMLHttpRequest();
+
   const pageParent = document.querySelector('#postcontainer');
   const rightcontainerParent = document.querySelector('#rightcontainer');
+
+  const upvoter = (inputid) => {
+    upvoterequest.open('PUT', `${host}/post/${inputid}/upvote`, true)
+    upvoterequest.onload = () => {
+      if (upvoterequest.status === 200) {
+        const source = JSON.parse(upvoterequest.response);
+        console.log(source);
+      }
+    }
+    upvoterequest.send()
+  }
+
+
+  const downvoter = (inputid) => {
+    downvoterequest.open('PUT', `${host}/post/${inputid}/downvote`, true)
+    downvoterequest.onload = () => {
+      if (downvoterequest.status === 200) {
+        const source = JSON.parse(downvoterequest.response);
+        console.log(source);
+      }
+    }
+    downvoterequest.send()
+  }
+
+  const deleter = (inputid) => {
+
+    
+  }
+
 
   postrequest.open('GET', `${host}/posts`, true);
 
@@ -28,7 +60,7 @@ window.onload = () => {
 
         let postcontent = document.createElement('div');
         postitem.appendChild(postcontent);
-        postcontent .classList.add('postcontent');
+        postcontent.classList.add('postcontent');
 
         let title = document.createElement('div');
         postcontent.appendChild(title);
@@ -76,7 +108,22 @@ window.onload = () => {
         downvoteimg.classList.add('downvoteimg');
         downvoteimg.setAttribute("src", "./assets/css/imgs/downvote.png");
 
-        
+        upvotebtn.addEventListener('click', () => {
+          upvoter(element.id);
+          upvoteimg.setAttribute("src", "./assets/css/imgs/upvoted.png");
+          score.innerText = (Number(score.innerText) + 1);
+        })
+
+        downvotebtn.addEventListener('click', () => {
+          downvoter(element.id);
+          downvoteimg.setAttribute("src", "./assets/css/imgs/downvoted.png");
+          score.innerText = (Number(score.innerText) - 1);
+        })
+
+        deleteButton.addEventListener('click', () => {
+          deleter(element.id);
+        })
+
       })
     }
   }
