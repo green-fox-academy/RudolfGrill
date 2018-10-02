@@ -6,6 +6,7 @@ window.onload = () => {
   const postrequest = new XMLHttpRequest();
   const upvoterequest = new XMLHttpRequest();
   const downvoterequest = new XMLHttpRequest();
+  const deleterequest = new XMLHttpRequest();
 
   const pageParent = document.querySelector('#postcontainer');
   const rightcontainerParent = document.querySelector('#rightcontainer');
@@ -34,8 +35,14 @@ window.onload = () => {
   }
 
   const deleter = (inputid) => {
+    deleterequest.open('DELETE', `${host}/post/${inputid}`, true)
+    deleterequest.onload = () => {
+      if (deleterequest.status ===200){
+        alert("That post is already disappeared dude!")
+      }
+    }
+    deleterequest.send()
 
-    
   }
 
 
@@ -122,6 +129,7 @@ window.onload = () => {
 
         deleteButton.addEventListener('click', () => {
           deleter(element.id);
+          pageParent.removeChild(postitem);
         })
 
       })
