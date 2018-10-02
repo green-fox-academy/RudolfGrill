@@ -8,7 +8,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/style.css" />
-  <script src="./assets/js/script.js"></script>
 </head>
 
 <body>
@@ -22,31 +21,26 @@
     </div>
 
 
-    <div id="contentcontainer">
-      <div id="postcontainer"></div>
-
-
-      <div id="rightcontainer">
-        <form action="/newpost">
-          <input type="submit" value="Submit a new post" />
-        </form>
-
-        <div id="related">
-          <h1>Share & discus realeted topics</h1>
-          <ul>
-            <li>Topic1</li>
-            <li>Topic2</li>
-            <li>Topic3</li>
-            <li>Topic4</li>
-            <li>Topic5</li>
-          </ul>
+    <div id="formcontainer">
+      <form action="http://localhost:8080/posts" method="POST" enctype="application/json">
+        <div id="title">
+          <label for="posttitle">Title of your post</label>
+          <input type="text" name="title" id="posttitle" required placeholder="please provide a title">
         </div>
-      </div>
+        <div id="url">
+          <label for="posturl">Url</label>
+          <input type="url" name="url" id="posturl" required placeholder="please provide an url">
+        </div>
+
+        <div id="buttons">
+          <button type="submit">Send post</button>
+          <button type="reset">Reset form</button>
+        </div>
+      </form>
+
+
+
     </div>
-
-
-
-  </div>
 
 </body>
 

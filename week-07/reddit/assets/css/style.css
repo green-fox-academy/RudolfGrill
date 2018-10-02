@@ -35,7 +35,6 @@ header{
 #postcontainer{
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   /*background-color: brown;*/
   width: 70%;
   height: 150vw;
@@ -62,11 +61,13 @@ header{
   width: 90%;
   height: auto;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-between;
-  flex-wrap: wrap;
-  border:1px solid gray;
+  flex-wrap: nowrap;
+  border:3px solid gray;
   border-radius: 5px;
+  background-color: #89ABC5;
+
 }
 
 .scorediv{
@@ -79,14 +80,12 @@ header{
 }
 
 .postcontent{
-  background-color: #89ABC5;
   font-size: 18px;
 }
 
 .interaction{
   display: flex;
   justify-content: space-around;
-  background-color: rgb(194, 190, 190);
 }
 
 button{

@@ -9,7 +9,6 @@ window.onload = () => {
   const deleterequest = new XMLHttpRequest();
 
   const pageParent = document.querySelector('#postcontainer');
-  const rightcontainerParent = document.querySelector('#rightcontainer');
 
   const upvoter = (inputid) => {
     upvoterequest.open('PUT', `${host}/post/${inputid}/upvote`, true)

@@ -6,7 +6,10 @@ const jsonParser = bodyParser.json();
 const path = require('path');
 const PORT = 8080;
 
+
 app.use('/assets', express.static('assets'));
+app.use(bodyParser.urlencoded({extended:false}));
+
 
 const connection = mysql.createConnection({
   host: 'localhost',
@@ -17,6 +20,10 @@ const connection = mysql.createConnection({
 
 app.get('/', (req, res) => {
   res.sendfile(path.join(__dirname, 'reddit.html'));
+});
+
+app.get('/newpost', (req, res) => {
+  res.sendfile(path.join(__dirname, 'newpost.html'));
 });
 
 connection.connect((err) => {
@@ -41,24 +48,16 @@ app.get('/posts', (req, res) => {
 });
 
 app.post('/posts', jsonParser, (req, res) => {
-  connection.query(`INSERT INTO posts(title, url) values("${req.body.title}", "${req.body.url}");`, (err, result) => {
+  connection.query(`INSERT INTO posts (title, url) VALUES ("${req.body.title}", "${req.body.url}");`, (err, result) => {
     if (err) {
       console.log(err.toString());
       res.satus(500).send('Database error');
       return;
     }
-    connection.query(`SELECT * FROM posts WHERE id=${result.insertId};`, (err, res) => {
-      if (err) {
-        console.log(err.toString());
-        res.satus(500).send('Database error');
-        return;
-      }
-      res.status(200).json({
-        result: res
-      });
-    })
+    res.redirect('/');
   })
-});
+})
+//});
 
 app.put('/post/:id/upvote', jsonParser, (req, res) => {
   connection.query(`UPDATE posts SET score = score + 1 where id = ${req.params.id};`, (err, selctedPost) => {
@@ -111,7 +110,7 @@ app.delete('/post/:id', (req, res) => {
   });
 });
 
-app.put('/post/:id', jsonParser, (req, res) => {
+app.put('/posts/:id', jsonParser, (req, res) => {
   connection.query(`UPDATE posts SET title="${req.body.title}", url="${req.body.url}" WHERE id=${req.params.id};`, (err, result) => {
     if (err) {
       console.log(err.toString());
