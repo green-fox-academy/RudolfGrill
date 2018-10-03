@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+ <meta charset="utf-8" />
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <title>Matrix Checker</title>
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" type="text/css" media="screen" href="/assets/style.css" />
+ <script src="/assets/script.js"></script>
+</head>
+
+<body>
+
+ <div id="wrapper">
+   <div id="header">
+     MATRIX CHECKER
+   </div>
+   <br>
+   <br>
+   <div>
+     Check if your matrix is increasing!
+     <br>
+     Add a matrix and sit back, while the evaluation happens.
+     <br>
+     <br>
+     Enter your matrix:
+   </div>
+   <br>
+   <form action="http://localhost:3000/matrices/validtype" method="POST" enctype="application/json">
+     <textarea name="matrix_numbers" id="textarea" cols="30" rows="10"></textarea>
+     <br>
+     <br>
+     <button id="submit" type="submit">Submit</button>
+     <br>
+     <br>
+     <br>
+     <div id="result">
+       Result:
+     </div>
+     <br>
+     <br>
+     <div id="answer">
+     </div>
+ </div>
+ </form>
+</body>
+
+</html> 
