@@ -6,7 +6,7 @@ const mysql = require('mysql');
 const path = require('path');
 const app = express();
 
-const PORT = 7000;
+const PORT = 3000;
 
 app.use('/assets', express.static('assets'));
 app.use(bodyParser.urlencoded( {extended: false} ));
@@ -41,9 +41,9 @@ app.post('/test', (req, res) => {
 })
 
 app.post('/matrix', (req, res) => {
-  let inputMatrix = req.body.matrix_numbers;
+  let inputMatrix = req.body.matrix;
   if (isSquare(inputMatrix) && increasingByRows(inputMatrix)) {
-    conn.query(`INSERT INTO matrixes (matrixNumbers) VALUES (?)`, [inputMatrix], (err, result) => {
+    conn.query(`INSERT INTO matrices (matrix_numbers) VALUES (?)`, [inputMatrix], (err, result) => {
       if (err) {
         console.log('Error connecting to database', err.message);
         res.status(500).send('Database error');
@@ -61,7 +61,7 @@ app.post('/matrix', (req, res) => {
 });
 
 app.get('/matrices', (req, res) => {
-  conn.query(`SELECT * FROM matrixes`, (error, result) => {
+  conn.query(`SELECT * FROM matrices`, (error, result) => {
     if (error) {
       console.log('Error connecting to database', error.message);
       res.status(500).send('Database error');

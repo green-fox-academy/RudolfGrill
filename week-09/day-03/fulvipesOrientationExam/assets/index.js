@@ -1,7 +1,7 @@
 'use strict';
 
 window.onload = () => {
-  const host = 'http://localhost:7000';
+  const server = 'http://localhost:3000';
 
   const submitButton = document.querySelector('button');
   const result = document.querySelector('h3');
@@ -9,7 +9,7 @@ window.onload = () => {
 
   submitButton.addEventListener('click', (event) => {
     event.preventDefault();
-    fetch(`${host}/matrix`, {
+    fetch(`${server}/matrix`, {
       method: 'POST',
       headers: {
         "Content-Type": "application/json; charset=utf-8",

@@ -21,7 +21,6 @@ window.onload = () => {
     upvoterequest.send()
   }
 
-
   const downvoter = (inputid) => {
     downvoterequest.open('PUT', `${host}/post/${inputid}/downvote`, true)
     downvoterequest.onload = () => {
@@ -43,7 +42,6 @@ window.onload = () => {
     deleterequest.send()
 
   }
-
 
   postrequest.open('GET', `${host}/posts`, true);
 
