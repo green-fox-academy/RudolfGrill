@@ -1,0 +1,16 @@
+body{
+  text-align: center;
+  background-color:rgb(173, 170, 170);
+}
+form{
+  background-color: rgb(130, 155, 238);
+}
+button{
+  width: 50%;
+  margin: 0 auto;
+  height: 50px;
+  border-radius: 10px;
+  margin: 10px;
+
+
+}
