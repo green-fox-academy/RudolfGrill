@@ -9,7 +9,7 @@ const app = express();
 const PORT = 8080;
 
 app.use('/assets', express.static('assets'));
-app.use(bodyParser.urlencoded( {extended: false} ));
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 const serverconn = mysql.createConnection({
@@ -30,6 +30,47 @@ serverconn.connect((err) => {
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
+
+app.get('/game', (req, res) => {
+
+});
+
+app.get('/questions', (req, res) => {
+
+});
+
+app.post('/questions', (req, res) => {
+
+})
+
+app.delete('/questions/id', (res,req)=>{
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
