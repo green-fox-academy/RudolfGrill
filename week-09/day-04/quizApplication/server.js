@@ -12,14 +12,14 @@ app.use('/assets', express.static('assets'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-const serverconn = mysql.createConnection({
+const conn = mysql.createConnection({
   host: 'localhost',
   user: 'root',
   password: '12345',
   database: 'quiz_app',
 });
 
-serverconn.connect((err) => {
+conn.connect((err) => {
   if (err) {
     console.log('Error connecting to Db', err.message);
     return;
@@ -32,7 +32,15 @@ app.get('/', (req, res) => {
 });
 
 app.get('/game', (req, res) => {
-
+    conn.query(`SELECT questions.id as question_id, question, answers.id, answer, is_correct FROM questions INNER JOIN answers ON questions.id = answers.question_id`, (error, result) => {
+    if (error) {
+      console.log('Error connecting to database', error.message);
+      res.status(500).send('Database error');
+      return;
+    }
+    res.status(200).send(result)
+    })
+  
 });
 
 app.get('/questions', (req, res) => {
@@ -43,28 +51,9 @@ app.post('/questions', (req, res) => {
 
 })
 
-app.delete('/questions/id', (res,req)=>{
+app.delete('/questions/id', (res, req) => {
 
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -75,3 +64,23 @@ app.delete('/questions/id', (res,req)=>{
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
+
+
+//****************Functions**********************//
+let max = 10;
+
+const randomNumbers = (max) => {
+
+  return Math.floor(Math.random() * Math.floor(max));
+
+}
+
+let myQuery = `SELECT 
+questions.id as question_id,
+question,
+answers.id,
+answer,
+is_correct
+FROM questions
+    INNER JOIN answers ON questions.id = answers.question_id
+     WHERE question.id=(${randomNumbers});`
