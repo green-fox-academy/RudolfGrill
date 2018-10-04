@@ -31,6 +31,10 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
 
+app.get('/admin', (req, res) => {
+  res.sendFile(path.join(__dirname, 'admin.html'));
+});
+
 app.get('/game', (req, res) => {
   const randomquestion = `SELECT * FROM questions ORDER BY RAND() LIMIT 1;`;
   conn.query(randomquestion, (err, result) => {
