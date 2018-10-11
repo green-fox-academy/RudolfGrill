@@ -73,9 +73,48 @@ app.get('/questions', (req, res) => { //This endpoint should return all the ques
   })
 });
 
-app.post('/questions', (req, res) => {
 
+app.post('/questions', (req, res) => {
+const source = req.body;
+const question = source.question;
+const answerOne = source.answerone;
+const isCorrectOne = isCorrect(source.radioone)
+const answerTwo = source.answertwo;
+const isCorrectTwo = isCorrect(source.radiotwo)
+const answerThree = source.answerthree;
+const isCorrectThree = isCorrect(source.radiothree)
+const answerFour = source.answerfour;
+const isCorrectFour = isCorrect(source.radiofour)
+
+const newquestionQ = `INSERT INTO questions (question) VALUES ('${question}');`;
+
+connection.query(newquestionQ, (err, result) => {
+  if (err) {
+    console.log(err.toString());
+    return;
+  } else {
+    let questionID = result.insertId;
+    // INSERT INTO tbl_name (a,b,c) VALUES(1,2,3),(4,5,6),(7,8,9);
+
+    const insertAnsQ = `INSERT INTO answers (question_id, answer, is_correct) VALUES 
+    (${questionID}, '${answerOne}', ${isCorrectOne}), 
+    (${questionID}, '${answerTwo}', ${isCorrectTwo}), 
+    (${questionID}, '${answerThree}', ${isCorrectThree}),
+    (${questionID}, '${answerOne}', ${isCorrectFour});`
+    connection.query(insertAnsQ, (err, result) => {
+      if (err) {
+        console.log(err.toString());
+        return;
+      }
+      console.log(result)
+      res.redirect('/admin')
+    })
+  }
 })
+})
+
+
+
 
 app.delete('/questions/id', (res, req) => {
 

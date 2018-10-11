@@ -14,10 +14,11 @@ window.onload = () => {
       headers: {
         "Content-Type": "application/json; charset=utf-8",
       },
-      body: JSON.stringify({matrix: inputMatrix.value})
-    }).then(response => response.json().then(respBody => {
-      result.textContent = respBody.status;
-      result.style.color = "red";
-    }));
+      body: JSON.stringify({ matrix: inputMatrix.value })
+    }).then(response => response.json()
+      .then(respBody => {
+        result.textContent = respBody.status;
+        result.style.color = "red";
+      }));
   })
 }

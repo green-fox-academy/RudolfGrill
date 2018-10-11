@@ -5,12 +5,12 @@ export { };
 // *hint: use a loop, console.log(integers) won't cut it
 // -  bonus for using the correct built in array method
 
-let integers: number[] = [4, 5, 6, 7];
+let team = ["Dávic", "Milos", "Jani", "Rudi"];
 
 
 
-let printAll = function (element: number) {
+let printAll =  (element) = >{
   console.log(element);
 }
 
-integers.forEach(printAll);
+team.forEach(printAll);
