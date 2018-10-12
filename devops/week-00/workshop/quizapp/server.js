@@ -2,6 +2,8 @@
 const express = require('express');
 const app = express();
 const PORT = 3000;
+require('dotenv').config();
+
 //if we use fetch
 // const fetch = require('node-fetch');
 
@@ -12,6 +14,7 @@ const path = require('path');
 
 app.use('/assets', express.static('assets'));
 app.use(bodyParser.urlencoded({ extended: false }));
+
 // in that case we dont have to put the jsonParser into the endpoint call
 app.use(bodyParser.json());
 // app.use(cors());
@@ -21,10 +24,10 @@ app.use(bodyParser.json());
 
 const mysql = require('mysql');
 const connection = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: '12345',
-  database: 'quiz_app',
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASS,
+  database: process.env.DB_DATABASE,
   multipleStatements: true
 });
 
@@ -147,3 +150,6 @@ app.delete('/questions/:id', (req, res) => {
 app.listen(PORT, () => {
   console.log(`el server esta corriendo en el port ${PORT}`)
 });
+
+
+//thx kitta
