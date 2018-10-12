@@ -1,3 +1,9 @@
+#randomkey
+randomkey.pem
+
+#dotenv
+*.env
+
 # Logs
 logs
 *.log

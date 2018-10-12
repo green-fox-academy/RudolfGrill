@@ -3,17 +3,15 @@ const express = require('express');
 const app = express();
 const PORT = 3000;
 require('dotenv').config();
-
-//if we use fetch
 // const fetch = require('node-fetch');
-
 const bodyParser = require('body-parser');
 // const cors = require('cors')
-
 const path = require('path');
 
 app.use('/assets', express.static('assets'));
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({
+  extended: false
+}));
 
 // in that case we dont have to put the jsonParser into the endpoint call
 app.use(bodyParser.json());
@@ -146,10 +144,6 @@ app.delete('/questions/:id', (req, res) => {
   })
 })
 
-
 app.listen(PORT, () => {
-  console.log(`el server esta corriendo en el port ${PORT}`)
+  console.log(`Server is running on port ${PORT}`)
 });
-
-
-//thx kitta
