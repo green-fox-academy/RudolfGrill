@@ -1,0 +1,183 @@
+* {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 14px;
+  box-sizing: border-box
+}
+
+body {
+  width: 100vw;
+  background: #0bda51;
+}
+
+#contentcontainer {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  min-width: 400px;
+  width: 60%;
+  justify-content: space-around;
+}
+
+#score {
+  width: 100%;
+  height: 60px;
+  font-size: 20px;
+  text-align: center;
+  padding: 15px 5px;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+}
+
+#toadmin {
+  width: 100%;
+  height: 60px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#buttonsdiv {
+  display: flex;
+  justify-content: center;
+  margin: 5px 0;
+}
+
+#btntoadmin, #givemenew {
+  padding: 15px 5px;
+  text-align: center;
+  height: 50px;
+  width: 120px;
+  background: rgb(181, 182, 181);
+  border: 1px solid white;
+  border-radius: 5px;
+  color: white;
+  margin: 5px;
+}
+
+#givemenew {
+  background: #c6b6d1;
+}
+
+#questions {
+  background: white;
+  width: 100%;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 3px solid #00cec9;
+  border-radius: 10px;
+  /* justify-content: center; */
+}
+
+#currentquest {
+  font-size: 16px;
+  padding: 15px 5px;
+  height: 70px;
+}
+
+.answer {
+  width: 280px;
+  height: 50px;
+  margin: 3px 0;
+  background: #00E6A6;
+  border-radius: 10px;
+  color: rgb(0, 0, 0);
+}
+
+#newone {
+  background: white;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 3px solid #00E6A6;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+
+input[type="text"] {
+  height: 40px;
+  width: 400px;
+  margin: 5px;
+}
+
+input[id="question"] {
+  height: 40px;
+  width: 420px;
+}
+
+#existing {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: auto;
+  background: white;
+  width: 100%;
+  border: 3px solid #00cec9;
+  border-radius: 10px;
+}
+
+#existing h1, #newone h1 {
+  font-size: 16px;
+  margin-left: 10px;
+  text-align: center;
+}
+
+#existing h3 {
+  font-size: 12px;
+  margin-left: 10px;
+  color: #a29bfe;
+}
+
+#questionlist {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.questdiv {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  /* padding: 10px 5px; */
+  margin: 5px 0;
+  /* border: 2px solid #ECF0F1; */
+}
+
+.questtext {
+  width: 70%;
+  margin: 10px 5px;
+  height: auto;
+}
+
+.deletebtn {
+  width: 80px;
+  height: 40px;
+  background: #e17055;
+  color: #ECF0F1;
+  margin-left: 5px;
+}
+
+.separator {
+  border: 0.5px solid #81ecec;
+}
+
+#formsubBtn, #formresBtn {
+  width: 80px;
+  height: 40px;
+  color: #ECF0F1;
+  margin-left: 5px;
+}
+
+#formsubBtn {
+  background: #00cec9;
+}
+
+#formresBtn {
+  background: #a29bfe;
+}
