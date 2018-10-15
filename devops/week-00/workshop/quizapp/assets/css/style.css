@@ -5,8 +5,8 @@
 }
 
 body {
-  width: 100vw;
-  background: #0bda51;
+  width: 110vw;
+  background: #E30031;
 }
 
 #contentcontainer {
@@ -28,6 +28,8 @@ body {
   text-transform: uppercase;
   display: flex;
   justify-content: center;
+  letter-spacing: 3px;
+
 }
 
 #toadmin {
@@ -49,26 +51,23 @@ body {
   padding: 15px 5px;
   text-align: center;
   height: 50px;
-  width: 120px;
-  background: rgb(181, 182, 181);
-  border: 1px solid white;
+  width: 170px;
+  background: #CFB946;
+  border: 1px solid rgb(0, 0, 0);
   border-radius: 5px;
-  color: white;
+  color: rgb(0, 0, 0);
   margin: 5px;
 }
 
-#givemenew {
-  background: #c6b6d1;
-}
 
 #questions {
-  background: white;
+  background:white;
   width: 100%;
   height: 350px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 3px solid #00cec9;
+  border: 3px solid #000000;
   border-radius: 10px;
   /* justify-content: center; */
 }
@@ -77,14 +76,16 @@ body {
   font-size: 16px;
   padding: 15px 5px;
   height: 70px;
+  font-weight: bold;
 }
 
 .answer {
   width: 280px;
   height: 50px;
   margin: 3px 0;
-  background: #00E6A6;
+  background: #F3E066;
   border-radius: 10px;
+  font-weight: bold;
   color: rgb(0, 0, 0);
 }
 
@@ -94,7 +95,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 3px solid #00E6A6;
+  border: 3px solid rgb(0, 0, 0);
   border-radius: 10px;
   margin: 20px 0;
 }
@@ -117,7 +118,7 @@ input[id="question"] {
   height: auto;
   background: white;
   width: 100%;
-  border: 3px solid #00cec9;
+  border: 3px solid #000000;
   border-radius: 10px;
 }
 
@@ -158,26 +159,35 @@ input[id="question"] {
 .deletebtn {
   width: 80px;
   height: 40px;
-  background: #e17055;
+  background: red;
   color: #ECF0F1;
   margin-left: 5px;
+  border-radius: 5px;
+
 }
 
 .separator {
-  border: 0.5px solid #81ecec;
+  border: 0.5px solid #000000;
+
 }
 
 #formsubBtn, #formresBtn {
-  width: 80px;
+  width: 130px;
   height: 40px;
-  color: #ECF0F1;
+  color: #CFB946;
   margin-left: 5px;
+  border-radius: 5px;
+
 }
 
 #formsubBtn {
-  background: #00cec9;
+  background: #CFB946;
+  border-radius: 5px;
+  color: black;
 }
 
 #formresBtn {
-  background: #a29bfe;
+  background: #CFB946;
+  border-radius: 5px;
+  color: black;
 }
