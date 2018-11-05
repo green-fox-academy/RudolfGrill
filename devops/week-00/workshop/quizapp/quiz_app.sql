@@ -74,5 +74,3 @@ INSERT INTO answers (id, question_id, answer, is_correct) VALUES
 
 ALTER TABLE answers
   ADD PRIMARY KEY (id);
-
-ALTER TABLE answers

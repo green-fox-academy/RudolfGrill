@@ -1,0 +1,25 @@
+version: '3.4'
+
+services:
+
+  js-database:
+    container_name: js-database
+    image: mariadb:latest
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: 12345
+      MYSQL_USER: root
+      MYSQL_USER_PASSWORD: 12345
+      MYSQL_DATABASE: quiz_app
+    ports:
+      - 3309:3306
+      
+  js-app:
+    container_name: js-container
+    depends_on:
+      - js-database
+    image: rudolfgrill/quizapp:quizapp
+    restart: always
+    ports:
+      - "3000:3000"
+    network_mode: "host"

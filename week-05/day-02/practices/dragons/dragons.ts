@@ -13,11 +13,11 @@ export const totalDamageOnDorkman = dragonEvents
   .filter(function (event) {
     return event.target === 'player-dorkman'
   })
-  .map(function(event) {
+  .map(function (event) {
     return event.value
   })
-  .reduce(function(prev, value) {
+  .reduce(function (prev, value) {
     return (prev || 0) + value
   })
 
-  console.log(`totalDamageOnDorkman\n`, totalDamageOnDorkman);
+console.log(`totalDamageOnDorkman\n`, totalDamageOnDorkman);

@@ -5,9 +5,14 @@
 const button = document.querySelector('button');
 const text = document.querySelector('ul');
 
+const callback = (event) => {
 
-setTimeout(() => {
-  text.innerText = `2 seconds ellapsed!  Mr. GiGiWiPi`;
-}, 2000);
+  setTimeout(() => {
+    text.innerText = `2 seconds ellapsed!  Mr. GiGiWiPi`;
+  }, 2000);
 
-button.addEventListener('click', setTimeout);
+
+}
+
+
+button.addEventListener('click', callback);

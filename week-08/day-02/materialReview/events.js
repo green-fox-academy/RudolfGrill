@@ -21,7 +21,7 @@ const getRandomColor = () => {
 
 const callback = (event) => {
   event.target.style.backgroundColor = getRandomColor();
-}
+};
 
 click.addEventListener('click', callback);
 hover.addEventListener('mouseenter', callback);

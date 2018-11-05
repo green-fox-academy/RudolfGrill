@@ -33,7 +33,7 @@
     }
   });
 
-  candyGenerator(() => {
+  const candyGenerator = () => {
     lollypopsCounter += 1;
     return candyGenerator;
   }, 1000);

@@ -1,9 +1,21 @@
-const button = document.querySelector('button');
-const text = document.querySelector('ul');
+window.onload = (event) => {
+  let loadMoment = event.timeStamp;
+  console.log(loadMoment);
 
+  const button = document.querySelector('button');
+  const text = document.querySelector('ul');
 
-setTimeout(() => {
-  text.innerText = `5 seconds elapsed and clicked 3 times!!!  Mr. GiGiWiPi`;
-}, 5000);
+  let clickCounter = 0;
 
-button.addEventListener('click', setTimeout);
+  button.addEventListener('click', (clickEvent) => {
+    let clickMoment = clickEvent.timeStamp;
+    console.log(clickMoment);
+    clickCounter++;
+    console.log(clickCounter);
+
+    if (clickCounter === 3 && (clickMoment - loadMoment) > 3) {
+      button.disabled = true
+      text.innerHTML = `${Math.floor((clickMoment - loadMoment) / 1000)} second elapsed and you clicked ${clickCounter} times`
+    }
+  });
+};

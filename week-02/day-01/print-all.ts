@@ -9,7 +9,7 @@ let team = ["Dávic", "Milos", "Jani", "Rudi"];
 
 
 
-let printAll =  (element) = >{
+let printAll =  (element) =>{
   console.log(element);
 }
 
