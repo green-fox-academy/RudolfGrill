@@ -11,4 +11,4 @@ function sumDigit(n: number): number {
   }
 }
 
-console.log(sumDigit(126));
+console.log(sumDigit(123456));

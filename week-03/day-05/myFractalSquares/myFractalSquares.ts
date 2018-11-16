@@ -17,7 +17,7 @@ beginPath(100,100);
 
 function drawSquares(xCor: number, yCor: number, size: number, loop: number) {
   if (loop > 0) {
-    ctx.(xCor + size, yCor, size, size);
+    //ctx.(xCor + size, yCor, size, size);
     
 
     let B: number = 3

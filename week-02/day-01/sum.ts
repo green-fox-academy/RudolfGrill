@@ -15,5 +15,4 @@ function sum(myNumbers: number) {
 
 }
 
-let answer = sum(givenParameter);
-console.log(answer);
+console.log(sum(givenParameter));

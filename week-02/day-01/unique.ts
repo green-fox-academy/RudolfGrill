@@ -8,7 +8,7 @@ export { }
 
 
 
-//let list: any = [1, 11, 34, 11, 52, 61, 1, 34];
+let list: any = [1, 11, 34, 11, 52, 61, 1, , 34, 34];
 
 function unique(array): any {
     let newArray: number[] = [];
@@ -20,5 +20,5 @@ function unique(array): any {
         }
     })
     return newArray;
-}
-console.log(unique([1, 11, 34, 11, 52, 61, 1, 34]));
+};
+console.log(unique(list));

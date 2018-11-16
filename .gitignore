@@ -1,5 +1,6 @@
 #randomkey
 randomkey.pem
+*.pem
 
 #dotenv
 *.env

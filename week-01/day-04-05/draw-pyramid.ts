@@ -12,6 +12,8 @@ export { }
 // *******
 //
 // The pyramid should have as many lines as lineCount is
+
+
 let lineCount: number = 4;
 let spaceCount: number = 3
 let starCount: number = 1;
@@ -30,4 +32,3 @@ for (let i = 0; i < lineCount; i++) {
     spaceCount--;
     starCount += 2;
 }
-
