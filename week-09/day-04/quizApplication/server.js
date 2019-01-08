@@ -19,7 +19,7 @@ const conn = mysql.createConnection({
   database: 'quiz_app',
 });
 
-conn.connect((err) => {
+conn.connect(err => {
   if (err) {
     console.log('Error connecting to Db', err.message);
     return;

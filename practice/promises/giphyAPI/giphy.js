@@ -1,14 +1,19 @@
 'use strict';
-let wordnikAPI = `https://`
-let getgiphyAPI = `https://api.giphy.com/v1/gifs/random?api_key=iJqcejSGW57gAMuDU42TfYJ85PcKgxWq&tag=&rating=G`;
+
+const wordnikAPI = `http://api.wordnik.com/v4/words.json/randomWord?api_key=YourWordnikAPIkey`
+const giphyAPI = `https://api.giphy.com/v1/gifs/search?rating=PG&api_key=YourGiphyAPIkey`;
 
 function setup() {
   noCanvas();
-  loadJSON(wordnikAPI, function (data) {
-    createP(data.word);
-    loadJSON(giphyAPI + data.word, function(data) {
-      console.log(data.data[0].images);
-      createImg(data.data[0].imgaes['fixed_height_small'].url)
-    });
-  });
-}
+  fetch(wordnikAPI)
+    .then(response => response.json())
+    .then(json => {
+      createP(json.word);
+      return fetch(giphyAPI + json.word);
+    })
+    .then(response => response.json())
+    .then(json => {
+      createImg(json.data[0].images['fixed_height_small'].url);
+    })
+    .catch(err => console.log(err));
+};
